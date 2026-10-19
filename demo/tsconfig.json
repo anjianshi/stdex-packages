@@ -1,10 +1,10 @@
 {
   "extends": "@anjianshi/presets-typescript/tsconfig-base.json",
-  "include": ["./"],
   "compilerOptions": {
     "rootDir": "./",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
-  }
+  },
+  "include": ["./src/", "./prisma.config.ts"]
 }

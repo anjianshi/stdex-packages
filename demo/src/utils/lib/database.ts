@@ -12,12 +12,12 @@ import {
 import { PrismaPg } from '@prisma/adapter-pg'
 import config from '@/utils/lib/config.js'
 import { rootLogger } from '@/utils/lib/logger.js'
-import { PrismaClient } from '@/prisma/generated/client.js'
+import { PrismaClient } from '@/prisma/client.js'
 
 /**
  * 导出相关类型和工具函数
  */
-export * from '@prisma/client'
+export * from '@/prisma/client.js'
 export type AppPrismaClient = typeof prisma
 export type PrismaClientInTransaction = GetPrismaClientInTransaction<AppPrismaClient>
 
