@@ -303,9 +303,6 @@ importers:
 
   presets-eslint/node:
     dependencies:
-      '@stdex/presets-eslint-base':
-        specifier: workspace:*
-        version: link:../base
       '@stdex/presets-eslint-typescript':
         specifier: workspace:*
         version: link:../typescript
@@ -357,6 +354,9 @@ importers:
       eslint-import-resolver-typescript:
         specifier: ^4.4.5
         version: 4.4.5(eslint-plugin-import-x@4.17.1(@typescript-eslint/utils@8.71.2(eslint@10.13.0(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0)(typescript@6.0.3))(eslint@10.13.0(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0))(eslint@10.13.0(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0)
+      eslint-plugin-import-x:
+        specifier: ^4.17.1
+        version: 4.17.1(@typescript-eslint/utils@8.71.2(eslint@10.13.0(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0)(typescript@6.0.3))(eslint@10.13.0(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0)
       typescript-eslint:
         specifier: ^8.64.0
         version: 8.71.2(eslint@10.13.0(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0)(typescript@6.0.3)
@@ -387,6 +387,77 @@ importers:
         version: link:../presets-prettier
 
   utils:
+    dependencies:
+      lodash:
+        specifier: ^4.18.1
+        version: 4.18.1
+    devDependencies:
+      '@emotion/react':
+        specifier: ^11.14.0
+        version: 11.14.0(@types/react@19.3.0)(react@19.3.1)(supports-color@5.5.0)
+      '@emotion/serialize':
+        specifier: ^1.3.3
+        version: 1.3.3
+      '@emotion/utils':
+        specifier: ^1.4.2
+        version: 1.4.2
+      '@prisma/client':
+        specifier: ^7.8.0
+        version: 7.10.1(prisma@7.10.1(@types/node@26.6.5)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(magicast@0.5.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3))(typescript@6.0.3)
+      '@stdex/presets-eslint-base':
+        specifier: workspace:*
+        version: link:../presets-eslint/base
+      '@stdex/presets-eslint-node':
+        specifier: workspace:*
+        version: link:../presets-eslint/node
+      '@stdex/presets-eslint-react':
+        specifier: workspace:*
+        version: link:../presets-eslint/react
+      '@stdex/presets-eslint-typescript':
+        specifier: workspace:*
+        version: link:../presets-eslint/typescript
+      '@stdex/presets-prettier':
+        specifier: workspace:*
+        version: link:../presets-prettier
+      '@stdex/presets-typescript':
+        specifier: workspace:*
+        version: link:../presets-typescript
+      '@types/lodash':
+        specifier: ^4.17.24
+        version: 4.17.26
+      '@types/node':
+        specifier: ^26.1.0
+        version: 26.6.5
+      '@types/react':
+        specifier: ^19.2.17
+        version: 19.3.0
+      chalk:
+        specifier: ^5.6.2
+        version: 5.6.2
+      dayjs:
+        specifier: ^1.11.21
+        version: 1.11.23
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
+      eslint:
+        specifier: ^10.6.0
+        version: 10.13.0(jiti@2.7.0)(supports-color@5.5.0)
+      react:
+        specifier: ^19.2.7
+        version: 19.3.1
+      redis:
+        specifier: ^6.1.0
+        version: 6.3.0
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vconsole:
+        specifier: ^3.15.1
+        version: 3.15.1
+    publishDirectory: dist
+
+  utils-request:
     dependencies:
       lodash:
         specifier: ^4.18.1

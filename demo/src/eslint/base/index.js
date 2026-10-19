@@ -9,11 +9,15 @@ import { libValue, libValue2 } from './lib.js'
 // lib2 应报错，因为没有带上扩展名（Node.js ESM 解析要求必须带上扩展名）
 import { libValueFromLib2 } from './lib2'
 
-// other-lib.js 应报错：文件不存在
-import { libValue3 } from './other-lib.js'
+// 应能正常引用，但调换顺序会报 `import-x/order`
+import { fnFromLib3 } from './lib3.js'
+import { fnFromLib4 } from './lib4.js'
+
+// lib5.js 应报错：文件不存在
+import { libValue5 } from './lib5.js'
 
 // 不应报错
-export const valuesFromLib = [libValue, libValue2, libValueFromLib2, libValue3]
+export const valuesFromLib = [libValue, libValue2, libValueFromLib2, libValue5]
 
 // 不应报错
 const v1 = 1
@@ -21,3 +25,5 @@ const v1 = 1
 // v2 应报错：变量未被使用
 // v3 应报错：变量不存在
 const v2 = v1 + v3
+
+export const v5 = fnFromLib3() + fnFromLib4()

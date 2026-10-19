@@ -13,11 +13,6 @@ export default defineConfig([
         ecmaVersion: 'latest',
       },
     },
-    settings: {
-      'import-x/resolver': {
-        node: true,
-      },
-    },
     rules: {
       'global-require': 'off',
       'no-console': 'off',

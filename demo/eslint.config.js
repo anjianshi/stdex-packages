@@ -7,17 +7,17 @@ const configs = defineConfig([
   ...baseConfigs,
   {
     name: 'configs-for-demo-eslint-node',
-    basePath: 'eslint/node',
+    basePath: 'src/eslint/node',
     extends: nodeConfigs,
   },
   {
     name: 'configs-for-demo-eslint-react',
-    basePath: 'eslint/react',
+    basePath: 'src/eslint/react',
     extends: reactConfigs,
   },
   {
     name: 'configs-for-demo-typescript',
-    basePath: 'typescript',
+    basePath: 'src/typescript',
     extends: nodeConfigs,
   },
 ])

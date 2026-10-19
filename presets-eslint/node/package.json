@@ -1,7 +1,7 @@
 {
   "name": "@stdex/presets-eslint-node",
-  "version": "1.0.0",
-  "description": "公共 ESLint 配置",
+  "version": "1.0.1",
+  "description": "通用 ESLint 配置（针对纯 Node.js + TypeScript 项目） - General ESLint Configurations(For Node.js + TypeScript Projects) ",
   "homepage": "https://github.com/anjianshi/stdex-packages/presets-eslint/",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
@@ -16,7 +16,6 @@
   },
   "main": "index.mjs",
   "dependencies": {
-    "@stdex/presets-eslint-base": "workspace:*",
     "@stdex/presets-eslint-typescript": "workspace:*",
     "globals": "^17.7.0"
   },

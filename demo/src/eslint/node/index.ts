@@ -13,7 +13,11 @@ import { functionB1, functionB2 } from './lib-b.js'
 
 // ./lib-c.js 和 @/eslint/node/lib-c.js 应报错：文件不存在
 import { functionC1 } from './lib-c.js'
-import { functionC2 } from '@/eslint/node/lib-c.js'
+import { functionC2 } from '@/eslint/node/lib-c.js' // eslint-disable-line import-x/order
+
+// 应能正常引用，但调换顺序后报 `import-x/order` 错误
+import { libV1 } from './lib-v1.js'
+import { libV2 } from './lib-v2.js'
 
 // functionA1 和 functionB1 应能正常调用
 // 其他函数调用应报错：不是可安全调用的类型

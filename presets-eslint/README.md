@@ -1,11 +1,15 @@
-# 通用 ESLint 配置
+# 通用 ESLint 配置 - General ESLint Configurations
+
+简体中文 | [English](./README_EN.md)
 
 ## 设计思路
 
-一、  
+### 精简规则
+
 只开启尽量少的规则，目标是**减少 bug 率**，而不是**限制代码风格**。
 
-二、  
+### 只“检查”，不“格式化”
+
 参考 [此文章](https://typescript-eslint.io/linting/troubleshooting/formatting/) 的思路，不开启代码样式规则，由专门的工具（如 `Prettier`）负责格式化。  
 通过引入 `eslint-config-prettier`，把 ESLint 的 `Layout & Formatting` 规则和 TypeScript、React 插件的此类规则都排除，[完整列表](https://github.com/prettier/eslint-config-prettier/blob/main/index.js)。
 
@@ -56,58 +60,11 @@ import nodeConfigs from '@stdex/presets-eslint-node/exclusive.mjs'
 export default defineConfig([...baseConfigs, ...nodeConfigs])
 ```
 
-### 配置 TypeScript
+### 配置 VS Code
 
-1、安装 TypeScript
+1. 安装 VS Code 插件 `ESLint`
 
-2、为 parser 指明 `tsconfig.json` 的位置。  
-`@typescript-eslint/parser` 需要有一个配置好了的 `tsconfig.json` 才能运行。  
-默认假定它与 ESLint 配置文件处在同目录，如果是在其他地方，则需手动指定：
-
-```js
-import { defineConfig } from 'eslint/config'
-import typescriptConfigs from '@stdex/presets-eslint-typescript'
-
-export default defineConfig([
-  ...typescriptConfigs,
-  {
-    languageOptions: {
-      parserOptions: {
-        project: '../tsconfig.json',
-      },
-    },
-  },
-])
-```
-
-3、为 import 插件指明 `tsconfig.json` 的位置。  
-如果在 TypeScript 项目里启用了 Node.js 原生 ES6 Module 或配置了 alias，  
-则 `eslint-import-plugin` 需要配合 `eslint-import-resolver-typescript` 且也需要一个配置好了的 `tsconfig.json` 才能正常运行。  
-如果 `tsconfig.json` 不在项目根目录，需要手动指明（以项目根目录为基准）：
-
-```js
-import { defineConfig } from 'eslint/config'
-import typescriptConfigs from '@stdex/presets-eslint-typescript'
-
-export default defineConfig([
-  ...typescriptConfigs,
-  {
-    settings: {
-      'import/resolver': {
-        typescript: {
-          project: './src/',
-        },
-      },
-    },
-  },
-])
-```
-
-### 配置 VSCode
-
-1、安装 VSCode 插件 `ESLint`
-
-2、修改 VSCode 设置（Code - Preferences - Settings）
+2. 修改 VS Code 设置（Code - Preferences - Settings）
 
 ```json
 {
@@ -120,9 +77,9 @@ export default defineConfig([
 }
 ```
 
-#### 关于 ESLint workingDirectories
+#### 关于 ESLint `workingDirectories`
 
-若 VSCode 的 workspace 配置成类似如下目录结构：
+若 VS Code 的 workspace 配置成类似如下目录结构：
 
 ```js
 projects/     // /Users/me/office/projects/
@@ -136,12 +93,12 @@ library/      // /Users/me/library/
 ```
 
 也就是，workspace 下添加了多个独立的文件夹，每个独立文件夹下又有多个项目。
-在开发这些项目（`proj-1`、`lib-1`...）时，VSCode 默认会把顶层目录作为 ESLint 的 `workingDirectory`，从那个目录下加载插件等依赖，导致找不到依赖。
-在 VSCode 配置里指定 `{ "mode": "auto" }` 可解决此问题，它会让 VSCode 把 `package.json` 存在的目录作为 `workingDirectory`，也就能正常引入依赖了。
+在开发这些项目（`proj-1`、`lib-1`...）时，VS Code 默认会把顶层目录作为 ESLint 的 `workingDirectory`，从那个目录下加载插件等依赖，导致找不到依赖。
+在 VS Code 配置里指定 `{ "mode": "auto" }` 可解决此问题，它会让 VS Code 把 `package.json` 存在的目录作为 `workingDirectory`，也就能正常引入依赖了。
 
 #### 关于 eslint.validate 配置
 
-以前 VSCode 里还需要配置 `eslint.validate`，但它现在被 `eslint.probe` 代替了。  
+以前 VS Code 里还需要配置 `eslint.validate`，但它现在被 `eslint.probe` 代替了。  
 且 `eslint.probe` 的默认值已符合需求，所以无需配置。
 
 ---
