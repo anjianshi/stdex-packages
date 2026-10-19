@@ -10,3 +10,5 @@ allowBuilds:
   prisma: true
   unrs-resolver: true
   workerd: true
+minimumReleaseAgeExclude:
+  - '@stdex/utils@1.0.0'
