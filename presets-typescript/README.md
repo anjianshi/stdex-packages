@@ -7,6 +7,13 @@
 | @anjianshi/presets-typescript/tsconfig-vite.json  | 用 Vite 打包                                                    |
 | tsc-with-alias                                    | 组合运行 tsc 和 tsc-alias 以及 nodemon。                        |
 
+## 关于 TypeScript 7
+
+TypeScript 7 是一次大更新，随着此次更新，以往对外提供的 API 变得不可用了，这导致 `typescript-eslint` 无法对接新版的 TypeScript。
+（官方预计 TypeScript 7.1 将会引入新版本的 API）
+虽然官方也提供了变相解决方案，即构建和类型检查用 7，ESLint 用 6，但这给项目配置增添了很多麻烦。
+所以在新 API 发布，且 `typescript-eslint` 完成适配前，暂时仍使用老的 TypeScript 6。
+
 ## 使用方式
 
 安装依赖：
