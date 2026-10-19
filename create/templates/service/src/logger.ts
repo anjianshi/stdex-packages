@@ -1,4 +1,4 @@
-import { logger as rootLogger } from '@anjianshi/utils/env-node/logging/index.js'
+import { logger as rootLogger } from '@stdex/utils/env-node/logging/index.js'
 import { Logger, initLogger } from 'starlight-server'
 import config from '@/config.js'
 

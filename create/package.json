@@ -1,8 +1,8 @@
 {
-  "name": "@anjianshi/create",
-  "version": "0.4.0",
+  "name": "@stdex/create",
+  "version": "1.0.0",
   "description": "基础项目模板",
-  "homepage": "https://github.com/anjianshi/js-packages/create/",
+  "homepage": "https://github.com/anjianshi/stdex-packages/create/",
   "type": "module",
   "scripts": {
     "dev": "rm -rf test && node ./src/index.js base --name=test"
@@ -18,12 +18,12 @@
     "!templates/**/.swc"
   ],
   "bugs": {
-    "url": "https://github.com/anjianshi/js-packages/issues",
+    "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"
   },
   "license": "MIT",
   "author": "anjianshi <anjianshi@gmail.com>",
-  "repository": "github:anjianshi/js-packages",
+  "repository": "github:anjianshi/stdex-packages",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
@@ -32,8 +32,8 @@
     "chalk": "^5.3.0"
   },
   "devDependencies": {
-    "@anjianshi/presets-eslint-node": "workspace:*",
-    "@anjianshi/presets-prettier": "workspace:*"
+    "@stdex/presets-eslint-node": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*"
   },
-  "prettier": "@anjianshi/presets-prettier/prettierrc"
+  "prettier": "@stdex/presets-prettier/prettierrc"
 }

@@ -5,17 +5,17 @@
 1、安装依赖
 
 ```shell
-pnpm add --save-dev @anjianshi/presets-prettier
+pnpm add --save-dev @stdex/presets-prettier
 ```
 
 此包已包含 Prettier 依赖，无需再手动添加。
 
 2、引用配置  
-在 `package.json` 中添加 `"prettier": "@anjianshi/presets-prettier/prettierrc"`，  
+在 `package.json` 中添加 `"prettier": "@stdex/presets-prettier/prettierrc"`，  
 或在项目根目录建立 `.prettierrc.js` 文件：
 
 ```js
-module.exports = '@anjianshi/presets-prettier/prettierrc'
+module.exports = '@stdex/presets-prettier/prettierrc'
 ```
 
 ## 配置 VSCode

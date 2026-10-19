@@ -1,23 +1,23 @@
 {
-  "name": "@anjianshi/presets-eslint-node",
-  "version": "6.3.3",
+  "name": "@stdex/presets-eslint-node",
+  "version": "1.0.0",
   "description": "公共 ESLint 配置",
-  "homepage": "https://github.com/anjianshi/js-packages/presets-eslint/",
+  "homepage": "https://github.com/anjianshi/stdex-packages/presets-eslint/",
   "bugs": {
-    "url": "https://github.com/anjianshi/js-packages/issues",
+    "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"
   },
   "license": "MIT",
   "author": "anjianshi <anjianshi@gmail.com>",
-  "repository": "github:anjianshi/js-packages",
+  "repository": "github:anjianshi/stdex-packages",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "main": "index.mjs",
   "dependencies": {
-    "@anjianshi/presets-eslint-base": "workspace:*",
-    "@anjianshi/presets-eslint-typescript": "workspace:*",
+    "@stdex/presets-eslint-base": "workspace:*",
+    "@stdex/presets-eslint-typescript": "workspace:*",
     "globals": "^17.7.0"
   },
   "peerDependencies": {

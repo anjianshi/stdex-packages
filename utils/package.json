@@ -1,17 +1,17 @@
 {
-  "name": "@anjianshi/utils",
-  "version": "4.0.0",
+  "name": "@stdex/utils",
+  "version": "1.0.0",
   "description": "Common JavaScript Utils",
-  "homepage": "https://github.com/anjianshi/js-packages/utils",
+  "homepage": "https://github.com/anjianshi/stdex-packages/utils",
   "bugs": {
-    "url": "https://github.com/anjianshi/js-packages/issues",
+    "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"
   },
   "license": "MIT",
   "author": "anjianshi <anjianshi@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anjianshi/js-packages.git"
+    "url": "git+https://github.com/anjianshi/stdex-packages.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -32,12 +32,12 @@
     "lodash": "^4.18.1"
   },
   "devDependencies": {
-    "@anjianshi/presets-eslint-base": "workspace:*",
-    "@anjianshi/presets-eslint-node": "workspace:*",
-    "@anjianshi/presets-eslint-react": "workspace:*",
-    "@anjianshi/presets-eslint-typescript": "workspace:*",
-    "@anjianshi/presets-prettier": "workspace:*",
-    "@anjianshi/presets-typescript": "workspace:*",
+    "@stdex/presets-eslint-base": "workspace:*",
+    "@stdex/presets-eslint-node": "workspace:*",
+    "@stdex/presets-eslint-react": "workspace:*",
+    "@stdex/presets-eslint-typescript": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*",
+    "@stdex/presets-typescript": "workspace:*",
     "@emotion/react": "^11.14.0",
     "@emotion/serialize": "^1.3.3",
     "@emotion/utils": "^1.4.2",
@@ -54,5 +54,5 @@
     "typescript": "^6.0.3",
     "vconsole": "^3.15.1"
   },
-  "prettier": "@anjianshi/presets-prettier/prettierrc"
+  "prettier": "@stdex/presets-prettier/prettierrc"
 }

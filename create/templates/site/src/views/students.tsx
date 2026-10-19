@@ -1,4 +1,4 @@
-import { usePageTitle } from '@anjianshi/utils/env-react'
+import { usePageTitle } from '@stdex/utils/env-react'
 
 export function Students() {
   usePageTitle('学生列表')

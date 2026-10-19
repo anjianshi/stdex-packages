@@ -10,7 +10,7 @@ export default defineConfig([
   eslintConfigPrettier,
 
   {
-    name: '@anjianshi/base',
+    name: '@stdex/base',
     rules: {
       // Possible Problems
       'array-callback-return': 'error',
@@ -112,7 +112,7 @@ export default defineConfig([
 
   // ESLint 配置文件中允许使用 Node.js 环境下的内容
   {
-    name: '@anjianshi/base/config-file-self',
+    name: '@stdex/base/config-file-self',
     files: ['**/eslint.config.{js,cjs,mjs}'],
     languageOptions: {
       globals: globals.node,

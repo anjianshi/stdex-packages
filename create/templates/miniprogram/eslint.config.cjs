@@ -1,9 +1,9 @@
-const globals = require('@anjianshi/presets-eslint-base/globals.cjs')
+const globals = require('@stdex/presets-eslint-base/globals.cjs')
 module.exports = [
   {
     ignores: ['dist/*'],
   },
-  ...require('@anjianshi/presets-eslint-typescript'),
+  ...require('@stdex/presets-eslint-typescript'),
   {
     languageOptions: {
       globals: globals.browser,

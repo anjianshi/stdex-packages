@@ -1,5 +1,5 @@
 import { prisma } from '@/utils/lib/database.js'
-import { success, failure } from '@anjianshi/utils/index.js'
+import { success, failure } from '@stdex/utils/index.js'
 
 export async function demoDB() {
   const result = await prisma.$withTransaction(async () => {

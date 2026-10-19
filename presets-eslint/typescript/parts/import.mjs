@@ -5,7 +5,7 @@
 import { tsExtensions, tsFiles } from './common.mjs'
 
 export default {
-  name: '@anjianshi/typescript/import',
+  name: '@stdex/typescript/import',
 
   files: tsFiles,
 

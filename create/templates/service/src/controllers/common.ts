@@ -3,7 +3,7 @@ import {
   type AnyController,
   Controller,
   initializeControllers,
-} from '@anjianshi/utils/env-service/index.js'
+} from '@stdex/utils/env-service/index.js'
 import { getTransactionContextedPrismaClient, type AppPrismaClient } from '@/database.js'
 import { type Logger, rootLogger } from '@/logger.js'
 
@@ -18,7 +18,7 @@ export interface Context {
 }
 
 export class AppController<
-  AllControllers extends Record<string, AnyController<Context>>
+  AllControllers extends Record<string, AnyController<Context>>,
 > extends Controller<Context, AllControllers> {
   protected readonly db: AppPrismaClient
   protected readonly logger: Logger
@@ -35,7 +35,7 @@ export type { ControllersFrom }
 export function initializeAppControllers<T extends Record<string, unknown>>(
   controllerClasses: T,
   db?: AppPrismaClient,
-  baseLogger?: Logger
+  baseLogger?: Logger,
 ) {
   db ??= getTransactionContextedPrismaClient()
   baseLogger ??= rootLogger.getChild('controller')

@@ -8,9 +8,9 @@
     "build": "vite build",
     "lint": "tsc --noEmit && eslint './src/'"
   },
-  "prettier": "@anjianshi/presets-prettier/prettierrc",
+  "prettier": "@stdex/presets-prettier/prettierrc",
   "dependencies": {
-    "@anjianshi/utils": "latest",
+    "@stdex/utils": "latest",
     "@ant-design/cssinjs": "latest",
     "@ant-design/icons": "latest",
     "@emotion/react": "latest",
@@ -22,9 +22,9 @@
     "react-router": "latest"
   },
   "devDependencies": {
-    "@anjianshi/presets-eslint-react": "workspace:*",
-    "@anjianshi/presets-prettier": "workspace:*",
-    "@anjianshi/presets-typescript": "workspace:*",
+    "@stdex/presets-eslint-react": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*",
+    "@stdex/presets-typescript": "workspace:*",
     "@swc/plugin-emotion": "latest",
     "@types/lodash": "latest",
     "@types/node": "latest",

@@ -1,4 +1,4 @@
-import { logger as rootLogger, adaptDebugLib } from '@anjianshi/utils/env-node/logging/index.js'
+import { logger as rootLogger, adaptDebugLib } from '@stdex/utils/env-node/logging/index.js'
 import config from '@/utils/lib/config.js'
 import debug from 'debug'
 

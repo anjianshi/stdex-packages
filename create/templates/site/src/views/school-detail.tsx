@@ -1,4 +1,4 @@
-import { usePageTitle } from '@anjianshi/utils/env-react'
+import { usePageTitle } from '@stdex/utils/env-react'
 import { useParams } from 'react-router'
 import { Breadcrumb } from '@/components/Breadcrumb'
 

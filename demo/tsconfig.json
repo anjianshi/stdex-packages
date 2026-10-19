@@ -1,5 +1,5 @@
 {
-  "extends": "@anjianshi/presets-typescript/tsconfig-base.json",
+  "extends": "@stdex/presets-typescript/tsconfig-base.json",
   "compilerOptions": {
     "rootDir": "./",
     "paths": {

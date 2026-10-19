@@ -1,5 +1,5 @@
-import { ConsoleHandler } from '@anjianshi/utils/env-browser/logging.js'
-import { logger, LogLevel } from '@anjianshi/utils/logging/index.js'
+import { ConsoleHandler } from '@stdex/utils/env-browser/logging.js'
+import { logger, LogLevel } from '@stdex/utils/logging/index.js'
 import { config } from '@/lib/config.js'
 
 logger.setLevel(config.inDev ? LogLevel.Debug : LogLevel.Info)

@@ -1,5 +1,5 @@
-import { EmotionCacheProvider } from '@anjianshi/utils/env-react/emotion'
-import { initDayJs } from '@anjianshi/utils/init-dayjs'
+import { EmotionCacheProvider } from '@stdex/utils/env-react/emotion'
+import { initDayJs } from '@stdex/utils/init-dayjs'
 import { StyleProvider } from '@ant-design/cssinjs'
 import { ConfigProvider, App as AntdApp } from 'antd'
 import zhCn from 'antd/locale/zh_CN'

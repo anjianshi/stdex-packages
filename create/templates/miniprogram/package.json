@@ -7,9 +7,9 @@
     "build": "gulp build"
   },
   "devDependencies": {
-    "@anjianshi/presets-eslint-typescript": "workspace:*",
-    "@anjianshi/presets-prettier": "workspace:*",
-    "@anjianshi/presets-typescript": "workspace:*",
+    "@stdex/presets-eslint-typescript": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*",
+    "@stdex/presets-typescript": "workspace:*",
     "@swc/core": "latest",
     "gulp": "latest",
     "gulp-rename": "latest",
@@ -18,5 +18,5 @@
     "sass": "latest",
     "tsc-alias": "latest"
   },
-  "prettier": "@anjianshi/presets-prettier/prettierrc"
+  "prettier": "@stdex/presets-prettier/prettierrc"
 }

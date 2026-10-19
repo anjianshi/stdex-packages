@@ -1,4 +1,4 @@
-import { sleep } from '@anjianshi/utils/index.js'
+import { sleep } from '@stdex/utils/index.js'
 
 async function run() {
   while (true) {

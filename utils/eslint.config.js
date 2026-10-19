@@ -1,6 +1,6 @@
-import nodeExclusiveConfigs from '@anjianshi/presets-eslint-node/exclusive.mjs'
-import reactExclusiveConfigs from '@anjianshi/presets-eslint-react/exclusive.mjs'
-import typescriptConfigs from '@anjianshi/presets-eslint-typescript'
+import nodeExclusiveConfigs from '@stdex/presets-eslint-node/exclusive.mjs'
+import reactExclusiveConfigs from '@stdex/presets-eslint-react/exclusive.mjs'
+import typescriptConfigs from '@stdex/presets-eslint-typescript'
 import { defineConfig } from 'eslint/config'
 
 export default defineConfig([

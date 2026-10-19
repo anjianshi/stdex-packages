@@ -1,6 +1,6 @@
 import path from 'node:path'
-import { getDirectoryPath } from '@anjianshi/utils/env-node/index.js'
-import { EnvReader } from '@anjianshi/utils/env-service/index.js'
+import { getDirectoryPath } from '@stdex/utils/env-node/index.js'
+import { EnvReader } from '@stdex/utils/env-service/index.js'
 
 /**
  * 环境信息

@@ -1,15 +1,15 @@
 {
-  "name": "@anjianshi/presets-typescript",
-  "version": "3.5.0",
+  "name": "@stdex/presets-typescript",
+  "version": "1.0.0",
   "description": "通用 tsconfig.json 配置",
-  "homepage": "https://github.com/anjianshi/js-packages/presets-typescript",
+  "homepage": "https://github.com/anjianshi/stdex-packages/presets-typescript",
   "bugs": {
-    "url": "https://github.com/anjianshi/js-packages/issues",
+    "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"
   },
   "license": "MIT",
   "author": "anjianshi <anjianshi@gmail.com>",
-  "repository": "github:anjianshi/js-packages",
+  "repository": "github:anjianshi/stdex-packages",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
@@ -19,8 +19,8 @@
     "tsc-with-alias": "tsc-with-alias.js"
   },
   "devDependencies": {
-    "@anjianshi/presets-eslint-node": "workspace:*",
-    "@anjianshi/presets-prettier": "workspace:*"
+    "@stdex/presets-eslint-node": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*"
   },
   "peerDependencies": {
     "nodemon": "^3.1.14",
@@ -38,5 +38,5 @@
       "optional": true
     }
   },
-  "prettier": "@anjianshi/presets-prettier/prettierrc"
+  "prettier": "@stdex/presets-prettier/prettierrc"
 }

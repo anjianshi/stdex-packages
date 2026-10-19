@@ -1,1 +1,1 @@
-module.exports = require('@anjianshi/presets-eslint-base')
+module.exports = require('@stdex/presets-eslint-base')

@@ -1,4 +1,4 @@
-# 公共 ESLint 配置
+# 通用 ESLint 配置
 
 ## 设计思路
 
@@ -7,18 +7,18 @@
 
 二、  
 参考 [此文章](https://typescript-eslint.io/linting/troubleshooting/formatting/) 的思路，不开启代码样式规则，由专门的工具（如 `Prettier`）负责格式化。  
-通过引入 `eslint-config-prettier`，ESLint 的 `Layout & Formatting` 规则和 TypeScript、React 插件的此类规则均被排除，[完整列表](https://github.com/prettier/eslint-config-prettier/blob/main/index.js)。
+通过引入 `eslint-config-prettier`，把 ESLint 的 `Layout & Formatting` 规则和 TypeScript、React 插件的此类规则都排除，[完整列表](https://github.com/prettier/eslint-config-prettier/blob/main/index.js)。
 
 ---
 
 ## 包列表
 
-| 包名                                 | 场景                 |
-| ------------------------------------ | -------------------- |
-| @anjianshi/presets-eslint-base       | 基础 JavaScript      |
-| @anjianshi/presets-eslint-typescript | TypeScript           |
-| @anjianshi/presets-eslint-react      | React + TypeScript   |
-| @anjianshi/presets-eslint-node       | Node.js + TypeScript |
+| 包名                             | 场景                 |
+| -------------------------------- | -------------------- |
+| @stdex/presets-eslint-base       | 基础 JavaScript      |
+| @stdex/presets-eslint-typescript | TypeScript           |
+| @stdex/presets-eslint-react      | React + TypeScript   |
+| @stdex/presets-eslint-node       | Node.js + TypeScript |
 
 ---
 
@@ -27,7 +27,7 @@
 ### 安装
 
 ```sh
-pnpm add --save-dev eslint @anjianshi/presets-eslint-xxx
+pnpm add --save-dev eslint @stdex/presets-eslint-xxx
 ```
 
 ### 配置 ESLint
@@ -36,7 +36,7 @@ pnpm add --save-dev eslint @anjianshi/presets-eslint-xxx
 
 ```js
 import { defineConfig } from 'eslint/config'
-import reactConfigs from '@anjianshi/presets-eslint-react'
+import reactConfigs from '@stdex/presets-eslint-react'
 
 export default defineConfig([
   ...reactConfigs,
@@ -45,13 +45,13 @@ export default defineConfig([
 ])
 ```
 
-如果只想引入某个场景专属的配置，可以引入对应包的 `exclusive.mjs` 文件（`exclusive.mjs` 里也不包括 JavaScript 基础配置，如有需要要手动引入）。  
+如果只想引入某个场景专属的配置，可以引入对应包的 `exclusive.mjs` 文件（`exclusive.mjs` 里不包括 JavaScript 基础配置，需要手动引入）。  
 例如对于一个纯 JavaScript 的 Node.js 项目，只引入 Node.js 相关配置，不包括 TypeScript 配置内容：
 
 ```js
 import { defineConfig } from 'eslint/config'
-import baseConfigs from '@anjianshi/presets-eslint-base'
-import nodeConfigs from '@anjianshi/presets-eslint-node/exclusive.mjs'
+import baseConfigs from '@stdex/presets-eslint-base'
+import nodeConfigs from '@stdex/presets-eslint-node/exclusive.mjs'
 
 export default defineConfig([...baseConfigs, ...nodeConfigs])
 ```
@@ -66,7 +66,7 @@ export default defineConfig([...baseConfigs, ...nodeConfigs])
 
 ```js
 import { defineConfig } from 'eslint/config'
-import typescriptConfigs from '@anjianshi/presets-eslint-typescript'
+import typescriptConfigs from '@stdex/presets-eslint-typescript'
 
 export default defineConfig([
   ...typescriptConfigs,
@@ -87,7 +87,7 @@ export default defineConfig([
 
 ```js
 import { defineConfig } from 'eslint/config'
-import typescriptConfigs from '@anjianshi/presets-eslint-typescript'
+import typescriptConfigs from '@stdex/presets-eslint-typescript'
 
 export default defineConfig([
   ...typescriptConfigs,
@@ -143,18 +143,6 @@ library/      // /Users/me/library/
 
 以前 VSCode 里还需要配置 `eslint.validate`，但它现在被 `eslint.probe` 代替了。  
 且 `eslint.probe` 的默认值已符合需求，所以无需配置。
-
----
-
-### 辅助内容 - @anjianshi/presets-eslint-base/utils.cjs
-
-此文件提供了一些工具函数:
-
-```typescript
-// 限定配置生效的路径
-// pathPrefixs 会转化为各配置对象的 files 属性，如果配置中已经有 files，则设置成各 files 的路径前缀。
-exports.limitFiles = function limitFiles(pathPrefixs: string | string[], configs: ESLintConfig[]): ESLintConfig
-```
 
 ---
 

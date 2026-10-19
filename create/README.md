@@ -14,8 +14,8 @@
 ## 使用方法
 
 ```shell
-# 这个命令本质上是执行 `npm exec @anjianshi/create`，即执行这个包 `package.json` 中的 `bin` 配置的脚本。
-npm init @anjianshi@latest {template} -- --name=xxx
+# 这个命令本质上是执行 `npm exec @stdex/create`，即执行这个包 `package.json` 中的 `bin` 配置的脚本。
+npm init @stdex@latest {template} -- --name=xxx
 ```
 
 - 若不指定 `template`，则使用 `基础模板`。
@@ -31,8 +31,8 @@ npm init @anjianshi@latest {template} -- --name=xxx
 
 `dependencies` 中的依赖最好指定为 `latest` 而不是 `workspace:*`，不然会出现各种问题：
 
-- 同时引用 `@anjianshi/utils` 和 `starlight-server` 时，`utils` 需要用 `latest`，不然两个类库的 `Logger` 类会被认为是不同的，导致类型检查不通过。
-- 网页项目运行时，提示找不到 `@anjianshi/utils` 内容
+- 同时引用 `@stdex/utils` 和 `starlight-server` 时，`utils` 需要用 `latest`，不然两个类库的 `Logger` 类会被认为是不同的，导致类型检查不通过。
+- 网页项目运行时，提示找不到 `@stdex/utils` 内容
 
 ### 定义变量
 

@@ -10,7 +10,7 @@
     "lint": "tsc -p tsconfig-build.json --noEmit",
     "loop": "rm -rf dist && tsc-with-alias -p tsconfig-build.json --watch --nodemon=dist/utils/loop.js"
   },
-  "prettier": "@anjianshi/presets-prettier/prettierrc",
+  "prettier": "@stdex/presets-prettier/prettierrc",
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "^7.10.0",
@@ -21,12 +21,12 @@
     "redis": "^5.12.1"
   },
   "devDependencies": {
-    "@anjianshi/presets-eslint-base": "workspace:*",
-    "@anjianshi/presets-eslint-node": "workspace:*",
-    "@anjianshi/presets-eslint-react": "workspace:*",
-    "@anjianshi/presets-prettier": "workspace:*",
-    "@anjianshi/presets-typescript": "workspace:*",
-    "@anjianshi/utils": "workspace:*",
+    "@stdex/presets-eslint-base": "workspace:*",
+    "@stdex/presets-eslint-node": "workspace:*",
+    "@stdex/presets-eslint-react": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*",
+    "@stdex/presets-typescript": "workspace:*",
+    "@stdex/utils": "workspace:*",
     "@types/debug": "^4.1.13",
     "@types/node": "latest",
     "@types/pg": "^8.23.1",

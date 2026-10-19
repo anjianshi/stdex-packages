@@ -1,4 +1,4 @@
-import typescriptConfigs from '@anjianshi/presets-eslint-typescript'
+import typescriptConfigs from '@stdex/presets-eslint-typescript'
 import { defineConfig } from 'eslint/config'
 import nodeExclusiveConfigs from './exclusive.mjs'
 

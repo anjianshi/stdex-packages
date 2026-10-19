@@ -8,7 +8,7 @@ import {
   adaptPrismaDebugLogging,
   getTransactionContextedPrismaClient as rawGetTransactionContextedPrismaClient,
   type GetPrismaClientInTransaction,
-} from '@anjianshi/utils/env-service/prisma/index.js'
+} from '@stdex/utils/env-service/prisma/index.js'
 import { PrismaPg } from '@prisma/adapter-pg'
 import config from '@/utils/lib/config.js'
 import { rootLogger } from '@/utils/lib/logger.js'

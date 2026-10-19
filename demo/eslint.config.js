@@ -1,6 +1,6 @@
-import baseConfigs from '@anjianshi/presets-eslint-base'
-import nodeConfigs from '@anjianshi/presets-eslint-node'
-import reactConfigs from '@anjianshi/presets-eslint-react'
+import baseConfigs from '@stdex/presets-eslint-base'
+import nodeConfigs from '@stdex/presets-eslint-node'
+import reactConfigs from '@stdex/presets-eslint-react'
 import { defineConfig } from 'eslint/config'
 
 const configs = defineConfig([
