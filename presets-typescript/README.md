@@ -5,7 +5,7 @@
 | @anjianshi/presets-typescript/tsconfig-base.json  | 仅用 TypeScript 包进行类型检查，用其他工具编译代码              |
 | @anjianshi/presets-typescript/tsconfig-build.json | 用 tsc 执行编译（支持编译类库和 Node.js 脚本，输出 ES6 Module） |
 | @anjianshi/presets-typescript/tsconfig-vite.json  | 用 Vite 打包                                                    |
-| tsc-with-alias                                    | 组合运行 tsc 和 tsc-alias。                                     |
+| tsc-with-alias                                    | 组合运行 tsc 和 tsc-alias 以及 nodemon。                        |
 
 ## 使用方式
 
@@ -65,3 +65,26 @@ pnpm add --save-dev @anjianshi/presets-typescript typescript
 因为 `tsc-alias` 是读取编译后的文件来替换 alias 内容，所以编译后的文件结构必须和编译前一致才行。
 例如没有在 `tsconfig.json` 里设置 `compilerOptions.rootDir` 的话，tsc 输出内容到 outDir 时会尝试省略一些不必要的上级目录，即 `src/a/b/c/index.js` 可能输出成 `dist/index.js`。
 此时 `tsc-alias` 就无法正常工作。
+
+## 使用 tsc-with-alias
+
+### 用法一：构建时使用
+
+`tsc-alias` 需要在 `tsc` 运行完毕后运行，其传参与 `tsc` 一致。
+通过此脚本，可以把原本的 `tsc xxx && tsc-alias xxx` 简写为 `tsc-with-alias xxx`，
+不用处理先后顺序，也不用重复传参。
+
+### 用法二：watch 时使用
+
+在监听并持续编译代码时，`tsc` 和 `tsc-alias` 需要并行运行，
+且 `tsc-alias` 应在 `tsc` 第一次编译完成后再开始运行。
+使用 `tsc-with-alias xxx --watch`，可实现它们的并行运行并妥善控制运行时机。
+
+### 用法三：watch 的同时启动 nodemon
+
+对于后端服务类项目，开发时通常希望在持续编译代码的同时启动 `nodemon` 来自动运行/重启项目。
+`nodemon` 也需要在 `tsc` 第一次编译完成后再开始运行。
+使用 `tsc-with-alias xxx --watch --nodemon=yyy` 或者 `tsc-with-alias xxx --watch --nodemon`
+可实现它们的并行运行并妥善控制运行时机。
+
+其中 `--nodemon=yyy` 的 yyy 是要传给 nodemon 的参数，如果有多个参数要传，可以这样写：`--nodemon='aaa bbb ccc'`
