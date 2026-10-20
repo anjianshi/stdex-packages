@@ -1,2 +1,3 @@
-此包用于测试其余各包的功能。
-This package is used to test the functionality of all other packages in the repository.
+# 测试各模块功能是否正常
+
+Test whether the functionality of each module works correctly

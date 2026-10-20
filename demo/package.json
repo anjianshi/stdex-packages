@@ -2,23 +2,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node dist/utils/index.js",
-    "build": "rm -rf dist && tsc-with-alias -p tsconfig-build.json",
-    "watch": "rm -rf dist && tsc-with-alias -p tsconfig-build.json --watch",
-    "db-generate": "prisma generate",
-    "db-push": "prisma db push",
-    "lint": "tsc -p tsconfig-build.json --noEmit",
-    "loop": "rm -rf dist && tsc-with-alias -p tsconfig-build.json --watch --nodemon=dist/utils/loop.js"
+    "build": "rm -rf dist && tsc-with-alias -p tsconfig.json",
+    "watch": "rm -rf dist && tsc-with-alias -p tsconfig.json --watch",
+    "loop": "rm -rf dist && tsc-with-alias -p tsconfig.json --watch --nodemon=dist/typescript/loop.js",
+    "lint": "tsc -p tsconfig-build.json --noEmit"
   },
   "prettier": "@stdex/presets-prettier/prettierrc",
   "dependencies": {
-    "@prisma/adapter-pg": "^7.10.0",
-    "@prisma/client": "^7.10.0",
-    "debug": "^4.4.3",
-    "dotenv": "^17.4.2",
-    "pg": "^8.23.1",
-    "react": "^19.3.1",
-    "redis": "^5.12.1"
+    "react": "^19.3.1"
   },
   "devDependencies": {
     "@stdex/presets-eslint-base": "workspace:*",
@@ -26,15 +17,11 @@
     "@stdex/presets-eslint-react": "workspace:*",
     "@stdex/presets-prettier": "workspace:*",
     "@stdex/presets-typescript": "workspace:*",
-    "@stdex/utils": "workspace:*",
-    "@types/debug": "^4.1.13",
-    "@types/node": "latest",
-    "@types/pg": "^8.23.1",
-    "@types/react": "latest",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
     "nodemon": "^3.1.14",
-    "prisma": "^7.10.0",
     "tsc-alias": "^1.9.7",
     "typescript": "^6.0.3"
   }

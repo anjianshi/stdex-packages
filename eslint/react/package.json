@@ -1,0 +1,29 @@
+{
+  "name": "@stdex/presets-eslint-react",
+  "version": "1.0.2",
+  "description": "通用 ESLint 配置（针对纯 React 项目） - Shared ESLint Configurations(For React Projects) ",
+  "homepage": "https://github.com/anjianshi/stdex-presets/eslint/",
+  "bugs": {
+    "url": "https://github.com/anjianshi/stdex-presets/issues",
+    "email": "anjianshi@gmail.com"
+  },
+  "license": "MIT",
+  "author": "anjianshi <anjianshi@gmail.com>",
+  "repository": "github:anjianshi/stdex-presets",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "main": "index.mjs",
+  "dependencies": {
+    "@stdex/presets-eslint-typescript": "workspace:*",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-ts-react-hooks": "^2.2.0",
+    "globals": "^17.7.0"
+  },
+  "peerDependencies": {
+    "eslint": "^10.6.0"
+  }
+}

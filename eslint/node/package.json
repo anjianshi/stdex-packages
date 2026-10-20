@@ -1,0 +1,25 @@
+{
+  "name": "@stdex/presets-eslint-node",
+  "version": "1.0.2",
+  "description": "通用 ESLint 配置（针对纯 Node.js + TypeScript 项目） - Shared ESLint Configurations(For Node.js + TypeScript Projects) ",
+  "homepage": "https://github.com/anjianshi/stdex-presets/eslint/",
+  "bugs": {
+    "url": "https://github.com/anjianshi/stdex-presets/issues",
+    "email": "anjianshi@gmail.com"
+  },
+  "license": "MIT",
+  "author": "anjianshi <anjianshi@gmail.com>",
+  "repository": "github:anjianshi/stdex-presets",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "main": "index.mjs",
+  "dependencies": {
+    "@stdex/presets-eslint-typescript": "workspace:*",
+    "globals": "^17.7.0"
+  },
+  "peerDependencies": {
+    "eslint": "^10.6.0"
+  }
+}

@@ -1,18 +1,23 @@
-# JavaScript 公共包合集
+# 通用配置文件合集
 
-在此 git repo 下维护所有个人项目用到的公共 JavaScript 包。如通用的配置文件、函数库。
+| 目录       | 内容                           | 包名                      |
+| ---------- | ------------------------------ | ------------------------- |
+| eslint     | 通用 ESLint 配置               | @stdex/presets-eslint-xxx |
+| prettier   | 通用 Prettier 配置             | @stdex/presets-prettier   |
+| typescript | 通用 TypeScript 配置及工具脚本 | @stdex/presets-typescript |
+| demo       | 测试各模块功能是否正常         |                           |
 
-| 目录               | 内容                     | 备注 |
-| ------------------ | ------------------------ | ---- |
-| presets-eslint     | 通用 ESLint 配置         |      |
-| presets-prettier   | 通用 Prettier 配置       |      |
-| presets-typescript | 通用 TypeScript 配置     |      |
-| create             | 项目模板                 |      |
-| utils              | 工具函数库               |      |
-| demo               | 测试以上各包能否正常运行 |      |
+详细介绍见各目录内的 `README.md`。
 
-## 如何发布
+---
 
-1. 先全局安装 [pnpm-workspace-publisher](https://github.com/anjianshi/pnpm-workspace-publisher)
-2. 修改有更新的包的版本号
-3. 运行 `ws-publish` 执行更新
+# Collection of Shared Configuration Files
+
+| Directory  | Contents                                                      | Package Name              |
+| ---------- | ------------------------------------------------------------- | ------------------------- |
+| eslint     | Shared ESLint configuration                                   | @stdex/presets-eslint-xxx |
+| prettier   | Shared Prettier configuration                                 | @stdex/presets-prettier   |
+| typescript | Shared TypeScript configuration and tools                     | @stdex/presets-typescript |
+| demo       | Test whether the functionality of each module works correctly |                           |
+
+See the `README.md` file in each directory for details.

@@ -1,10 +1,12 @@
 {
-  "extends": "@stdex/presets-typescript/tsconfig-base.json",
+  "extends": "@stdex/presets-typescript/tsconfig-build.json",
   "compilerOptions": {
-    "rootDir": "./",
+    "rootDir": "./src",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "outDir": "./dist/",
+    "types": ["node"]
   },
-  "include": ["./src/", "./prisma.config.ts"]
+  "include": ["./src"]
 }

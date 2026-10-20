@@ -1,1 +1,0 @@
-import './demo-school.js'
