@@ -12,6 +12,22 @@
  * 2. 在插件里自定义 `estree-plugin-ext` printer，使用修改过的 print() 函数。
  *
  * 3. 要求用户在 prettier 配置里，把 jsx 文件的 parser 设置为 `babel-plugin-ext`，tsx 文件的 parser 设置为 `typescript-plugin-ext`。
+ *
+ * --------
+ *
+ * Adds the `jsxElementParens` option. When set to `avoid`, it removes parentheses that wrap JSX elements.
+ *
+ * These parentheses are added by `maybeWrapJsxElementInParens()` in `prettier/src/language-js/print/jsx.js`.
+ * The approach is based on: https://github.com/prettier/prettier/issues/2724#issuecomment-1010212039
+ * However, the linked post forks a new package, while this implementation uses a plugin.
+ *
+ * Implementation:
+ * 1. Define the `babel-plugin-ext` and `typescript-plugin-ext` parsers in the plugin, setting both of their `astFormat` values to `estree-plugin-ext`.
+ *    Prettier formats the code using the printer whose name matches the `astFormat` specified by the parser.
+ *
+ * 2. Define the `estree-plugin-ext` printer in the plugin, using a modified `print()` function.
+ *
+ * 3. In the Prettier configuration, users must set the parser for JSX files to `babel-plugin-ext` and the parser for TSX files to `typescript-plugin-ext`.
  */
 import estreePlugin from 'prettier/plugins/estree.mjs'
 import typescriptPlugin from 'prettier/plugins/typescript.mjs'

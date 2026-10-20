@@ -1,39 +1,47 @@
 {
   "compilerOptions": {
-    // ========== 类型检查 ==========
+    // ========== 类型检查 Type Checking ==========
 
     // 开启严格检查
+    // Enable strict type checking
     "strict": true,
 
     // 对象中未明确定义的 key，类型标记为”可能为 undefined“，而不是假设一定有值
+    // Treat values accessed through object keys that are not explicitly defined as possibly `undefined` instead of assuming they exist
     "noUncheckedIndexedAccess": true,
 
-    // ========== 模块化 ==========
+    // ========== 模块化 Modules ==========
 
     // 允许用 import X from 'xxx' 代替 import * as X from 'xxx'
+    // Allow `import X from 'xxx'` in place of `import * as X from 'xxx'`
     "allowSyntheticDefaultImports": true,
 
     // 使 ES6 脚本可以更方便地引用 CommonJS 模块
+    // Make it easier for ES6 modules to import CommonJS modules
     "esModuleInterop": true,
 
     "module": "NodeNext",
 
     "moduleResolution": "NodeNext",
 
-    // ========== 运行环境 ==========
+    // ========== 运行环境 Runtime Environment ==========
 
     // 假设代码运行环境是最新的
+    // Assume the code runs in the latest environment
     "target": "ESNext",
 
     // 允许使用装饰器
+    // Enable decorators
     "experimentalDecorators": true,
 
     // TypeScript 本身不转义 JSX，交给其他工具
+    // Preserve JSX for another tool to transform
     "jsx": "preserve",
 
-    // ========== 编译结果 ==========
+    // ========== 编译结果 Compilation Output ==========
 
     // 保证 outDir 输出的文件结构和源文件的结构一致（不然 outDir 会尝试省略不必要的上级目录）
+    // Keep the file structure in `outDir` consistent with the source structure (otherwise, `outDir` may omit unnecessary parent directories)
     "rootDir": "../../../src/"
   },
 

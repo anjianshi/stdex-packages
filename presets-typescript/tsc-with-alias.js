@@ -2,6 +2,7 @@ import childProcess from 'node:child_process'
 
 /**
  * 整理参数
+ * Process arguments
  */
 let argv = process.argv.slice(2)
 

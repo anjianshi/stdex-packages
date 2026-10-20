@@ -2,6 +2,7 @@ const path = require('path')
 const packageDir = path.resolve(__dirname)
 
 // 只定义与默认值不同的项，完整列表见：https://prettier.io/docs/en/options.html
+// Only define options that differ from their defaults. See the complete list: https://prettier.io/docs/en/options.html
 module.exports = {
   printWidth: 100,
   semi: false,
@@ -9,6 +10,7 @@ module.exports = {
   arrowParens: 'avoid',
 
   // 来自插件的选项
+  // Options provided by the plugin
   jsxElementParens: 'avoid',
   plugins: [path.join(packageDir, 'plugin-jsx-element-parens.mjs')],
 
@@ -21,6 +23,7 @@ module.exports = {
     },
 
     // 使用插件自己定义的 parser 来处理文件
+    // Use the parsers defined by the plugin to process these files
     {
       files: ['*.jsx'],
       options: {

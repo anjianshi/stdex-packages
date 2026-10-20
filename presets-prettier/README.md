@@ -1,8 +1,10 @@
-# 通用 Prettier 配置
+# 通用 Prettier 配置 - General Prettier Configuration
+
+简体中文 | [English](./README_EN.md)
 
 ## 如何使用
 
-1、安装依赖
+### 1. 安装依赖
 
 ```shell
 pnpm add --save-dev @stdex/presets-prettier
@@ -10,7 +12,8 @@ pnpm add --save-dev @stdex/presets-prettier
 
 此包已包含 Prettier 依赖，无需再手动添加。
 
-2、引用配置  
+### 2. 引用配置
+
 在 `package.json` 中添加 `"prettier": "@stdex/presets-prettier/prettierrc"`，  
 或在项目根目录建立 `.prettierrc.js` 文件：
 
@@ -18,11 +21,11 @@ pnpm add --save-dev @stdex/presets-prettier
 module.exports = '@stdex/presets-prettier/prettierrc'
 ```
 
-## 配置 VSCode
+## 配置 VS Code
 
-1、VSCode 安装 `Prettier` 插件
+1、VS Code 安装 `Prettier` 插件
 
-2、VSCode 配置里指定如下内容：
+2、VS Code 配置里指定如下内容：
 
 ```json
 "editor.formatOnSave": true,
@@ -32,7 +35,7 @@ module.exports = '@stdex/presets-prettier/prettierrc'
 "[javascript][javascriptreact][typescript][typescriptreact][json][jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 ```
 
-3、也可以把此配置粘贴到 VSCode 配置里作为全局配置，这样临时项目也能应用格式化，格式如下：
+3、也可以把此配置粘贴到 VS Code 配置里作为全局配置，这样临时项目也能应用格式化，格式如下：
 
 ```json
 "prettier.printWidth": 100,
@@ -43,5 +46,5 @@ module.exports = '@stdex/presets-prettier/prettierrc'
 
 ### 格式化 wxml
 
-推荐 VSCode 下安装 `WXML - Language Service` 扩展，以更方便地编辑 wxml 文件。
-在 VSCode 配置里添加：`"minapp-vscode.wxmlFormatter": "prettier"` 以让其使用 Prettier 来格式化 wxml 代码。
+推荐 VS Code 下安装 `WXML - Language Service` 扩展，以更方便地编辑 wxml 文件。
+在 VS Code 配置里添加：`"minapp-vscode.wxmlFormatter": "prettier"` 以让其使用 Prettier 来格式化 wxml 代码。
