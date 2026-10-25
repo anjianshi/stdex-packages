@@ -2,7 +2,7 @@
   "name": "@stdex/presets-eslint-base",
   "version": "1.2.0",
   "description": "通用基础 ESLint 配置 - Shared ESLint Configurations(For JavaScript-only Projects) ",
-  "homepage": "https://github.com/anjianshi/stdex-packages/presets-eslint/",
+  "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/presets-eslint/",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"

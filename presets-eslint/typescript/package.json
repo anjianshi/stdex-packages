@@ -2,7 +2,7 @@
   "name": "@stdex/presets-eslint-typescript",
   "version": "1.2.0",
   "description": "通用 ESLint 配置（针对 TypeScript 项目） - Shared ESLint Configurations(For TypeScript Projects) ",
-  "homepage": "https://github.com/anjianshi/stdex-packages/presets-eslint/",
+  "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/presets-eslint/",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"

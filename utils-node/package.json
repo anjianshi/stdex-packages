@@ -2,7 +2,7 @@
   "name": "@stdex/utils-node",
   "version": "1.3.0",
   "description": "Node.js 脚本及后端服务工具库",
-  "homepage": "https://github.com/anjianshi/stdex-packages/utils-node",
+  "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/utils-node",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"

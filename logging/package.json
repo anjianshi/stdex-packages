@@ -2,7 +2,7 @@
   "name": "@stdex/logging",
   "version": "1.2.0",
   "description": "功能丰富、可扩展的日志记录库",
-  "homepage": "https://github.com/anjianshi/stdex-packages/logging",
+  "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/logging",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"

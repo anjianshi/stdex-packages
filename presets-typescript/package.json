@@ -2,7 +2,7 @@
   "name": "@stdex/presets-typescript",
   "version": "1.2.0",
   "description": "通用 TypeScript 配置及工具脚本 - Shared TypeScript configuration and utility scripts",
-  "homepage": "https://github.com/anjianshi/stdex-packages/presets-typescript",
+  "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/presets-typescript",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"

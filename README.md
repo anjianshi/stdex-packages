@@ -15,12 +15,12 @@ JavaScript / TypeScript 实用工具集，随各类项目开发不断完善。
 
 ### 功能模块
 
-| 目录                      | 内容             | 特点                         | 包名             |
-| ------------------------- | ---------------- | ---------------------------- | ---------------- |
-| [server](./server/)       | 后端服务框架     | 功能完备，经过真实项目验证   | @stdex/server    |
-| [logging](./logging/)     | 日志记录库       | 内置功能丰富，扩展性强       | @stdex/logging   |
-| [request](./request/)     | HTTP 请求库      | 可靠、可定制                 | @stdex/request   |
-| [validator](./validator/) | 数据验证、格式化 | 支持 TypeScript 类型自动推理 | @stdex/validator |
+| 目录                      | 内容             | 特点                                       | 包名             |
+| ------------------------- | ---------------- | ------------------------------------------ | ---------------- |
+| [server](./server/)       | 后端服务框架     | 快速搭建后端服务，功能完备，经真实项目验证 | @stdex/server    |
+| [logging](./logging/)     | 日志记录库       | 内置功能丰富，扩展性强                     | @stdex/logging   |
+| [request](./request/)     | HTTP 请求库      | 可靠、可定制                               | @stdex/request   |
+| [validator](./validator/) | 数据验证、格式化 | 支持 TypeScript 类型自动推理               | @stdex/validator |
 
 ### 工具库
 

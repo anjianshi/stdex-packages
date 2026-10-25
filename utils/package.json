@@ -2,7 +2,7 @@
   "name": "@stdex/utils",
   "version": "1.2.0",
   "description": "通用工具库",
-  "homepage": "https://github.com/anjianshi/stdex-packages/utils",
+  "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/utils",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"
