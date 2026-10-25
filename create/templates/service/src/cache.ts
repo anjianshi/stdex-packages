@@ -1,7 +1,7 @@
 /**
  * 维护基于 redis 的数据缓存
  */
-import { type CacheOptions, Cache, initRedisLogging } from '@stdex/utils/env-service/redis-cache.js'
+import { type CacheOptions, Cache, initRedisLogging } from '@stdex/utils-node/redis-cache.js'
 import { createClient, type RedisClientType } from 'redis'
 import config from '@/config.js'
 import { rootLogger } from '@/logger.js'
@@ -12,7 +12,7 @@ export const redis: RedisClientType = createClient({
 })
 
 export async function initRedis() {
-  initRedisLogging(redis)
+  initRedisLogging(redis, rootLogger.getChild('redis'))
   await redis.connect()
 }
 

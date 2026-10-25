@@ -1,4 +1,4 @@
-# General TypeScript configuration and utility scripts
+# Shared TypeScript configuration and utility scripts
 
 [简体中文](./README.md) | English
 

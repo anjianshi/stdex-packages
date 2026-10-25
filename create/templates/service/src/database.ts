@@ -1,3 +1,4 @@
+import { PrismaPg } from '@prisma/adapter-pg'
 import {
   getPrismaLoggingOptions,
   adaptPrismaLogging,
@@ -8,8 +9,7 @@ import {
   adaptPrismaDebugLogging,
   getTransactionContextedPrismaClient as rawGetTransactionContextedPrismaClient,
   type GetPrismaClientInTransaction,
-} from '@stdex/utils/env-service/prisma/index.js'
-import { PrismaPg } from '@prisma/adapter-pg'
+} from '@stdex/utils-node/prisma/index.js'
 import config from '@/config.js'
 import { rootLogger } from '@/logger.js'
 import { PrismaClient } from '@/prisma/client.js'
@@ -27,7 +27,7 @@ const logger = rootLogger.getChild('prisma')
  * 初始化基础 PrismaClient 实例
  */
 if (config.DEBUG && config.DB_DEBUG) {
-  adaptPrismaDebugLogging(logger)
+  adaptPrismaDebugLogging((name: string) => logger.getChild(name))
 }
 
 const adapter = new PrismaPg({ connectionString: config.DB_URL })

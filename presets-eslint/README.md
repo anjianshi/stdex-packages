@@ -1,4 +1,4 @@
-# 通用 ESLint 配置 - General ESLint Configurations
+# 通用 ESLint 配置 - Shared ESLint Configurations
 
 简体中文 | [English](./README_EN.md)
 
@@ -10,10 +10,12 @@
 
 ### 只“检查”，不“格式化”
 
-参考 [此文章](https://typescript-eslint.io/linting/troubleshooting/formatting/) 的思路，不开启代码样式规则，由专门的工具（如 `Prettier`）负责格式化。  
-通过引入 `eslint-config-prettier`，把 ESLint 的 `Layout & Formatting` 规则和 TypeScript、React 插件的此类规则都排除，[完整列表](https://github.com/prettier/eslint-config-prettier/blob/main/index.js)。
+参考 [此文章](https://typescript-eslint.io/linting/troubleshooting/formatting/) 的思路，  
+不开启代码样式规则，由专门的工具（如 `Prettier`）负责格式化。
 
----
+通过引入 `eslint-config-prettier`，  
+把 ESLint 的 `Layout & Formatting` 规则和 TypeScript、React 插件的此类规则都排除。  
+[完整列表](https://github.com/prettier/eslint-config-prettier/blob/main/index.js)。
 
 ## 包列表
 
@@ -23,8 +25,6 @@
 | @stdex/presets-eslint-typescript | TypeScript           |
 | @stdex/presets-eslint-react      | React + TypeScript   |
 | @stdex/presets-eslint-node       | Node.js + TypeScript |
-
----
 
 ## 如何使用
 

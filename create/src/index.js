@@ -106,6 +106,7 @@ fs.cpSync(templatePath, projectPath, {
 const filesToRename = [
   { from: '_gitignore', to: '.gitignore' },
   { from: '_pnpm-workspace.yaml', to: 'pnpm-workspace.yaml' },
+  { from: '_env', to: '.env' },
 ]
 for (const item of filesToRename) {
   const fromPath = path.join(projectPath, item.from)
@@ -213,7 +214,7 @@ if (confirmPath(packageJSONPath) === 'file') {
 
 function formatDependencies(dependencies) {
   return dependencies
-    .map(([name, ver]) => (ver !== 'latest' && ver !== 'workspace:*' ? `${name}@${ver}` : name))
+    .map(([name, ver]) => (ver !== 'latest' ? `${name}@${ver}` : name))
     .join(' ')
 }
 

@@ -1,4 +1,4 @@
-# 通用 Prettier 配置 - General Prettier Configuration
+# 通用 Prettier 配置 - Shared Prettier Configuration
 
 简体中文 | [English](./README_EN.md)
 

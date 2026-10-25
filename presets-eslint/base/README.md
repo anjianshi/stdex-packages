@@ -1,6 +1,6 @@
-# 通用 ESLint 配置（针对纯 JavaScript 项目）
+# 通用基础 ESLint 配置
 
-General ESLint Configurations(For JavaScript-only Projects)
+Shared Base ESLint Configurations
 
 详细介绍和使用方法见：[presets-eslint/README.md](../README.md)
 

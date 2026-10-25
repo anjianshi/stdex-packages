@@ -1,7 +1,7 @@
 {
   "name": "@stdex/presets-prettier",
-  "version": "1.0.1",
-  "description": "通用 Prettier 配置 - General Prettier Configuration",
+  "version": "1.2.0",
+  "description": "通用 Prettier 配置 - Shared Prettier Configuration",
   "homepage": "https://github.com/anjianshi/stdex-packages/presets-prttier",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",

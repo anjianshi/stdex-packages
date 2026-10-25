@@ -1,4 +1,6 @@
-# 项目模板
+# 项目模板 - Project Templates
+
+简体中文 | [English](./README_EN.md)
 
 ## 模板列表
 
@@ -27,12 +29,7 @@ npm init @stdex@latest {template} -- --name=xxx
 
 ### 指定依赖版本
 
-除非有明确的版本需要，否则 `package.json` 中的依赖版本都指定为 `latest` 或 `workspace:*`，项目初始化时会替换为实际版本号。
-
-`dependencies` 中的依赖最好指定为 `latest` 而不是 `workspace:*`，不然会出现各种问题：
-
-- 同时引用 `@stdex/utils` 和 `starlight-server` 时，`utils` 需要用 `latest`，不然两个类库的 `Logger` 类会被认为是不同的，导致类型检查不通过。
-- 网页项目运行时，提示找不到 `@stdex/utils` 内容
+除非有明确的版本需要，否则 `package.json` 中的依赖版本都指定为 `latest`，项目初始化时会替换为实际版本号。
 
 ### 定义变量
 

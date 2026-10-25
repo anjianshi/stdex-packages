@@ -1,10 +1,10 @@
-import { EmotionCacheProvider } from '@stdex/utils/env-react/emotion'
-import { initDayJs } from '@stdex/utils/init-dayjs'
 import { StyleProvider } from '@ant-design/cssinjs'
+import { EmotionCacheProvider } from '@stdex/utils-frontend/react/emotion.js'
 import { ConfigProvider, App as AntdApp } from 'antd'
 import zhCn from 'antd/locale/zh_CN'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router/dom'
+import { initDayJs } from '@/lib/init-dayjs.js'
 import { router } from './router'
 
 import './style.css'

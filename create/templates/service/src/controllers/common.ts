@@ -3,7 +3,7 @@ import {
   type AnyController,
   Controller,
   initializeControllers,
-} from '@stdex/utils/env-service/index.js'
+} from '@stdex/utils/controllers.js'
 import { getTransactionContextedPrismaClient, type AppPrismaClient } from '@/database.js'
 import { type Logger, rootLogger } from '@/logger.js'
 

@@ -1,7 +1,7 @@
 {
   "name": "@stdex/presets-eslint-node",
-  "version": "1.0.1",
-  "description": "通用 ESLint 配置（针对纯 Node.js + TypeScript 项目） - General ESLint Configurations(For Node.js + TypeScript Projects) ",
+  "version": "1.2.0",
+  "description": "通用 ESLint 配置（针对纯 Node.js + TypeScript 项目） - Shared ESLint Configurations(For Node.js + TypeScript Projects) ",
   "homepage": "https://github.com/anjianshi/stdex-packages/presets-eslint/",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",

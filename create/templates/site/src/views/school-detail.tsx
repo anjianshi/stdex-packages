@@ -1,4 +1,4 @@
-import { usePageTitle } from '@stdex/utils/env-react'
+import { usePageTitle } from '@stdex/utils-frontend/react/hooks.js'
 import { useParams } from 'react-router'
 import { Breadcrumb } from '@/components/Breadcrumb'
 

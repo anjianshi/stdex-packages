@@ -1,6 +1,6 @@
 # 通用 ESLint 配置（针对 TypeScript 项目）
 
-General ESLint Configurations(For TypeScript Projects)
+Shared ESLint Configurations(For TypeScript Projects)
 
 详细介绍和使用方法见：[presets-eslint/README.md](../README.md)
 

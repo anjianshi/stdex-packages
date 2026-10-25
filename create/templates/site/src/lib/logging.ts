@@ -1,11 +1,5 @@
-import { ConsoleHandler } from '@stdex/utils/env-browser/logging.js'
-import { logger, LogLevel } from '@stdex/utils/logging/index.js'
+import { logger, getLogger, LogLevel } from '@stdex/logging'
 import { config } from '@/lib/config.js'
 
 logger.setLevel(config.inDev ? LogLevel.Debug : LogLevel.Info)
-logger.addHandler(new ConsoleHandler())
-export { logger }
-
-export function getLogger(name: string) {
-  return logger.getChild(name)
-}
+export { logger, getLogger }

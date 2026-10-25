@@ -1,4 +1,4 @@
-import { usePageTitle } from '@stdex/utils/env-react'
+import { usePageTitle } from '@stdex/utils-frontend/react/hooks.js'
 
 export function Students() {
   usePageTitle('学生列表')

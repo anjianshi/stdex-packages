@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stdex-logging demo</title>
+  </head>
+
+  <body></body>
+
+  <script src="./dist/dayjs.min.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "dayjs": "./dayjs.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import { logger, LogLevel } from './dist/index.js'
+    import { FileHandler } from './dist/handlers/index.js'
+
+    logger.setLevel(LogLevel.Debug)
+
+    const fileHandler = new FileHandler()
+    logger.addHandler(fileHandler)
+
+    logger.debug('debug content', 1)
+    logger.info('info content', 2)
+    logger.warn('warning content', 3)
+    logger.error('error content', 4)
+  </script>
+</html>

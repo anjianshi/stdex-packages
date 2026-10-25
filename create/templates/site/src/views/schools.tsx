@@ -1,5 +1,5 @@
+import { usePageTitle } from '@stdex/utils-frontend/react/hooks.js'
 import { useNavigate } from 'react-router'
-import { usePageTitle } from '@stdex/utils/env-react'
 
 const schools = [
   { id: 1, name: '学校-1' },

@@ -1,0 +1,6 @@
+{
+  "extends": "./node_modules/@stdex/presets-typescript/tsconfig-build",
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}

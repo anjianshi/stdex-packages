@@ -1,4 +1,4 @@
-# General ESLint Configurations
+# Shared ESLint Configurations
 
 [简体中文](./README.md) | English
 
@@ -13,8 +13,6 @@ Enable as few rules as possible. The goal is to **reduce bugs**, not to **enforc
 Following the approach described in [this article](https://typescript-eslint.io/linting/troubleshooting/formatting/), code-style rules are not enabled; formatting is handled by dedicated tools such as `Prettier`.  
 By including `eslint-config-prettier`, ESLint's `Layout & Formatting` rules and equivalent rules from the TypeScript and React plugins are disabled. See the [complete list](https://github.com/prettier/eslint-config-prettier/blob/main/index.js).
 
----
-
 ## Packages
 
 | Package                          | Use Case             |
@@ -23,8 +21,6 @@ By including `eslint-config-prettier`, ESLint's `Layout & Formatting` rules and 
 | @stdex/presets-eslint-typescript | TypeScript           |
 | @stdex/presets-eslint-react      | React + TypeScript   |
 | @stdex/presets-eslint-node       | Node.js + TypeScript |
-
----
 
 ## Usage
 

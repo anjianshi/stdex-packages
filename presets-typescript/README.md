@@ -1,4 +1,4 @@
-# 通用 TypeScript 配置及工具脚本 - General TypeScript configuration and utility scripts.
+# 通用 TypeScript 配置及工具脚本 - Shared TypeScript configuration and utility scripts.
 
 简体中文 | [English](./README_EN.md)
 

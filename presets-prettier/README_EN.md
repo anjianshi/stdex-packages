@@ -1,4 +1,4 @@
-# General Prettier Configuration
+# Shared Prettier Configuration
 
 [简体中文](./README.md) | English
 

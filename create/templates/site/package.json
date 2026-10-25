@@ -10,7 +10,9 @@
   },
   "prettier": "@stdex/presets-prettier/prettierrc",
   "dependencies": {
-    "@stdex/utils": "latest",
+    "@stdex/logging": "workspace:*",
+    "@stdex/utils": "workspace:*",
+    "@stdex/utils-frontend": "workspace:*",
     "@ant-design/cssinjs": "latest",
     "@ant-design/icons": "latest",
     "@emotion/react": "latest",
@@ -32,6 +34,7 @@
     "@types/react-dom": "latest",
     "@vitejs/plugin-react-swc": "latest",
     "eslint": "latest",
+    "typescript": "^6.0.3",
     "vite": "latest",
     "vite-plugin-svgr": "latest"
   }

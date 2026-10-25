@@ -1,11 +1,10 @@
-import { logger as rootLogger } from '@stdex/utils/env-node/logging/index.js'
-import { Logger, initLogger } from 'starlight-server'
+import { type Logger, logger as rootLogger, adaptDebugLib } from '@stdex/logging'
+import { FileHandler } from '@stdex/logging/handlers'
+import debug from 'debug'
 import config from '@/config.js'
 
-export { Logger, rootLogger }
+export { type Logger, rootLogger }
 
-initLogger(rootLogger, {
-  level: config.DEBUG ? 'debug' : 'info',
-  debugLib: '*',
-  file: { dir: config.LOGS_DIR },
-})
+rootLogger.setLevel(config.DEBUG ? 'debug' : 'info')
+rootLogger.addHandler(new FileHandler({ dir: config.LOGS_DIR }))
+adaptDebugLib(debug, '*', rootLogger)

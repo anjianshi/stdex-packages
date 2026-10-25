@@ -1,4 +1,4 @@
-import { usePageTitle } from '@stdex/utils/env-react'
+import { usePageTitle } from '@stdex/utils-frontend/react/hooks.js'
 
 export function Dashboard() {
   usePageTitle('信息概览')

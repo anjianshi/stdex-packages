@@ -1,0 +1,48 @@
+{
+  "name": "@stdex/validator",
+  "version": "1.2.0",
+  "description": "数据验证、格式化工具，支持自动类型推理",
+  "homepage": "https://github.com/anjianshi/stdex-packages/validator",
+  "bugs": {
+    "url": "https://github.com/anjianshi/stdex-packages/issues",
+    "email": "anjianshi@gmail.com"
+  },
+  "license": "MIT",
+  "author": "anjianshi <anjianshi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anjianshi/stdex-packages.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "npm run clear && tsc",
+    "watch": "npm run clear && tsc --watch",
+    "clear": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "lint": "tsc --noEmit && eslint './src/'"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist/"
+  ],
+  "dependencies": {
+    "@stdex/utils": "workspace:*",
+    "dayjs": "^1.11.23",
+    "lodash": "^4.18.1"
+  },
+  "devDependencies": {
+    "@stdex/presets-eslint-typescript": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*",
+    "@stdex/presets-typescript": "workspace:*",
+    "@types/lodash": "^4.17.27",
+    "eslint": "^10.6.0",
+    "typescript": "^6.0.3"
+  },
+  "prettier": "@stdex/presets-prettier/prettierrc"
+}

@@ -1,18 +1,48 @@
-# JavaScript 公共包合集
+# 基础扩展库 - Standard Extension Packages
 
-在此 git repo 下维护所有个人项目用到的公共 JavaScript 包。如通用的配置文件、函数库。
+基于开发实践总结出的 JavaScript / TypeScript 常用工具。
 
-| 目录               | 内容                     | 备注 |
-| ------------------ | ------------------------ | ---- |
-| presets-eslint     | 通用 ESLint 配置         |      |
-| presets-prettier   | 通用 Prettier 配置       |      |
-| presets-typescript | 通用 TypeScript 配置     |      |
-| create             | 项目模板                 |      |
-| utils              | 工具函数库               |      |
-| demo               | 测试以上各包能否正常运行 |      |
+## 项目理念
 
-## 如何发布
+### 务实
 
-1. 先全局安装 [pnpm-workspace-publisher](https://github.com/anjianshi/pnpm-workspace-publisher)
-2. 修改有更新的包的版本号
-3. 运行 `ws-publish` 执行更新
+有用、好用即可，不求高大上和完美。
+
+### 清晰
+
+尽量保证代码和技术概念清晰、易懂，避免奇技淫巧。
+
+### 开放
+
+预留扩展空间，不强制使用习惯。
+
+## 项目内容
+
+详细介绍见各项目自己的 README。  
+未额外说明的，均同时兼容浏览器和 Node.js 环境。
+
+### 功能模块
+
+| 目录                      | 内容             | 特点                         | 包名             |
+| ------------------------- | ---------------- | ---------------------------- | ---------------- |
+| [server](./server/)       | 后端服务框架     | 功能完备，经过真实项目验证   | @stdex/server    |
+| [logging](./logging/)     | 日志记录库       | 内置功能丰富，扩展性强       | @stdex/logging   |
+| [request](./request/)     | HTTP 请求库      | 可靠、可定制                 | @stdex/request   |
+| [validator](./validator/) | 数据验证、格式化 | 支持 TypeScript 类型自动推理 | @stdex/validator |
+
+### 工具库
+
+| 目录                                | 内容                          | 包名                  |
+| ----------------------------------- | ----------------------------- | --------------------- |
+| [utils](./utils/)                   | 通用工具库                    | @stdex/utils          |
+| [utils-frontend](./utils-frontend/) | 浏览器环境及 React 应用工具库 | @stdex/utils-frontend |
+| [utils-node](./utils-node/)         | Node.js 脚本及后端服务工具库  | @stdex/utils-node     |
+
+### 预设配置
+
+| 目录                                        | 内容                         | 包名                      |
+| ------------------------------------------- | ---------------------------- | ------------------------- |
+| [presets-eslint](./presets-eslint/)         | ESLint 配置                  | @stdex/presets-eslint-xxx |
+| [presets-prettier](./presets-prettier/)     | Prettier 配置                | @stdex/presets-prettier   |
+| [presets-typescript](./presets-typescript/) | TypeScript 配置及工具脚本    | @stdex/presets-typescript |
+| [create](./create/)                         | 项目模版，快速初始化各类项目 | @stdex/create             |

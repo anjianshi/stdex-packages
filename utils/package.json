@@ -1,7 +1,7 @@
 {
   "name": "@stdex/utils",
-  "version": "1.0.1",
-  "description": "Common JavaScript Utils",
+  "version": "1.2.0",
+  "description": "通用工具库",
   "homepage": "https://github.com/anjianshi/stdex-packages/utils",
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",
@@ -15,44 +15,40 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public",
-    "directory": "dist"
+    "access": "public"
   },
   "type": "module",
   "scripts": {
     "watch": "npm run clear && tsc --watch",
-    "build": "npm run clear && tsc && node publish-prepare.cjs",
+    "build": "npm run clear && tsc",
     "clear": "rm -rf dist",
     "prepublishOnly": "npm run build",
-    "postpublish": "rm dist/package.json",
     "lint": "tsc --noEmit && eslint './src/'"
   },
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*.js": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "dependencies": {
     "lodash": "^4.18.1"
   },
   "devDependencies": {
-    "@stdex/presets-eslint-base": "workspace:*",
-    "@stdex/presets-eslint-node": "workspace:*",
-    "@stdex/presets-eslint-react": "workspace:*",
     "@stdex/presets-eslint-typescript": "workspace:*",
     "@stdex/presets-prettier": "workspace:*",
     "@stdex/presets-typescript": "workspace:*",
-    "@emotion/react": "^11.14.0",
-    "@emotion/serialize": "^1.3.3",
-    "@emotion/utils": "^1.4.2",
-    "@prisma/client": "^7.8.0",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^26.1.0",
-    "@types/react": "^19.2.17",
-    "chalk": "^5.6.2",
-    "dayjs": "^1.11.21",
-    "dotenv": "^17.4.2",
     "eslint": "^10.6.0",
-    "react": "^19.2.7",
-    "redis": "^6.1.0",
-    "typescript": "^6.0.3",
-    "vconsole": "^3.15.1"
+    "typescript": "^6.0.3"
   },
   "prettier": "@stdex/presets-prettier/prettierrc"
 }
