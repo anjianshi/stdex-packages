@@ -1,4 +1,4 @@
-import { type Logger } from '@anjianshi/utils'
+import { type GeneralLogger } from '@stdex/utils'
 import { path2MIMEType } from './mime-types.js'
 import { HTTPError, type NodeResponse } from './types.js'
 
@@ -9,7 +9,7 @@ import { HTTPError, type NodeResponse } from './types.js'
 export class ResponseUtils {
   constructor(
     readonly nodeResponse: NodeResponse,
-    readonly logger: Logger,
+    readonly logger: GeneralLogger,
     /** 处理 JSON 输出中的自定义类型 */
     public jsonReplacer?: (key: string, value: unknown) => unknown,
   ) {}

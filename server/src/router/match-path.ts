@@ -12,7 +12,7 @@
  * - “模式”和“待匹配路径”开头结尾的 "/" 均不影响匹配。例如模式 /abc 可以和路径 abc/ 匹配。
  * - 不区分大小写
  */
-import { clearSlash } from '@anjianshi/utils'
+import { clearSlash } from '@stdex/utils/url.js'
 import escapeRegExp from 'lodash/escapeRegExp.js'
 
 // 经过解析的模式节点

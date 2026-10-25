@@ -1,10 +1,10 @@
 {
-  "name": "starlight-server",
-  "version": "1.14.0",
+  "name": "@stdex/server",
+  "version": "1.1.0",
   "description": "Simple But Powerful Node.js HTTP Server",
   "type": "module",
   "scripts": {
-    "demo": "rimraf dist && (concurrently --raw \"tsc-with-alias --watch\" \"nodemon dist/demo/index.js\")",
+    "demo": "rimraf dist && tsc-with-alias --watch --nodemon=dist/demo/index.js",
     "build": "rimraf dist && tsc-with-alias",
     "watch": "rimraf dist && tsc-with-alias --watch",
     "prepublishOnly": "npm run build",
@@ -16,9 +16,9 @@
     "http",
     "framework"
   ],
-  "homepage": "https://github.com/anjianshi/starlight-server",
+  "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/server",
   "bugs": {
-    "url": "https://github.com/anjianshi/starlight-server/issues",
+    "url": "https://github.com/anjianshi/stdex-packages/issues",
     "email": "anjianshi@gmail.com"
   },
   "files": [
@@ -27,28 +27,26 @@
   ],
   "license": "MIT",
   "author": "anjianshi <anjianshi@gmail.com>",
-  "repository": "github:anjianshi/starlight-server",
+  "repository": "github:anjianshi/stdex-packages",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "main": "dist/index.js",
   "dependencies": {
-    "@anjianshi/utils": "^4.0.0",
-    "chalk": "^5.6.2",
+    "@stdex/utils": "workspace:*",
+    "@stdex/utils-node": "workspace:*",
+    "@stdex/validator": "workspace:*",
     "dayjs": "^1.11.23",
-    "debug": "^4.4.3",
     "lodash": "^4.18.1",
     "swagger-ui-dist": "^5.33.1"
   },
   "devDependencies": {
-    "@anjianshi/presets-eslint-node": "^6.3.3",
-    "@anjianshi/presets-prettier": "^3.2.0",
-    "@anjianshi/presets-typescript": "^3.4.1",
-    "@types/debug": "^4.1.13",
+    "@stdex/presets-eslint-node": "workspace:*",
+    "@stdex/presets-prettier": "workspace:*",
+    "@stdex/presets-typescript": "workspace:*",
     "@types/lodash": "^4.17.26",
     "@types/node": "^22.20.5",
     "@types/swagger-ui-dist": "^3.30.6",
-    "concurrently": "^8.2.2",
     "eslint": "^10.12.0",
     "nodemon": "^3.1.14",
     "rimraf": "^5.0.10",
@@ -56,5 +54,5 @@
     "typescript": "^6.0.3"
   },
   "eslintIgnore": [],
-  "prettier": "@anjianshi/presets-prettier/prettierrc"
+  "prettier": "@stdex/presets-prettier/prettierrc"
 }

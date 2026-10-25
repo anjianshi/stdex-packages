@@ -16,7 +16,7 @@ function callback(
   limit: number,
   resolve: (result: Buffer | undefined) => void,
   reject: (error: HTTPError) => void,
-) {
+): void {
   // 若客户端提供了 Content-Length，确认其小于限额（若不符合要求，直接跳过接收）
   // If the client provides a Content-Length header, confirm that it is less than the maximum allowed size (if not, skip receiving it).
   let contentLength: number | undefined

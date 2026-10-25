@@ -1,4 +1,4 @@
-Starlight Server: 功能简约、结构清晰的 HTTP 服务框架
+功能简约、结构清晰的 HTTP 服务框架
 
 # 功能模块
 

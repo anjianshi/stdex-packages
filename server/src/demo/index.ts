@@ -1,14 +1,4 @@
-import path from 'node:path'
-import { getDirectoryPath } from '@anjianshi/utils/env-node/index.js'
-import { getLogger, startHTTPServer, Router } from '@/index.js'
-
-const logger = getLogger({
-  level: 'debug',
-  debugLib: '*',
-  file: {
-    dir: path.resolve(getDirectoryPath(import.meta), '../../logs'),
-  },
-})
+import { startHTTPServer, Router } from '@/index.js'
 
 // declare module '@/index.js' {
 //   interface Context {
@@ -72,6 +62,6 @@ router.register({
 
 startHTTPServer({
   handler: router.handle,
-  logger: logger.getChild('http'),
+  logger: console,
   port: 8801,
 })

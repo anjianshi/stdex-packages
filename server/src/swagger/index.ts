@@ -1,7 +1,7 @@
 import fsPromise from 'node:fs/promises'
 import path from 'node:path'
-import { clearSlash } from '@anjianshi/utils'
-import { isFileExists } from '@anjianshi/utils/env-node/index.js'
+import { clearSlash } from '@stdex/utils/url.js'
+import { isFileExists } from '@stdex/utils-node/fs.js'
 import defaultsDeep from 'lodash/defaultsDeep.js'
 import { getAbsoluteFSPath } from 'swagger-ui-dist'
 import { type ResponseUtils } from '@/http/index.js'
@@ -101,13 +101,19 @@ export class Swagger {
     filepath = clearSlash(filepath)
 
     // 输出接口 JSON 数据
-    if (filepath === 'api-swagger.json') return response.json(this.document)
+    if (filepath === 'api-swagger.json') {
+      response.json(this.document)
+      return
+    }
 
     // 输出 Swagger 静态文件内容
     const swaggerDir = getAbsoluteFSPath()
     const abspath = path.join(swaggerDir, filepath || 'index.html')
     if (!this.fileCache.has(abspath)) {
-      if (!(await isFileExists(abspath))) return response.error(404)
+      if (!(await isFileExists(abspath))) {
+        response.error(404)
+        return
+      }
 
       let content = (await fsPromise.readFile(abspath)).toString()
       if (filepath.endsWith('swagger-initializer.js')) {

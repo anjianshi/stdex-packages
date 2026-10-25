@@ -1,9 +1,9 @@
-import { type Result, success, failure, formatSuccess } from '@anjianshi/utils'
+import { type Result, success, failure, formatSuccess } from '@stdex/utils'
 import {
   getValidator,
   type Definition as ValidatorDefinition,
-  type AllowedInputValue,
-} from '@anjianshi/utils/validators/index.js'
+  type PrimitiveType,
+} from '@stdex/validator'
 import { type Request } from '@/http/request.js'
 import { type ResponseUtils } from '@/http/response.js'
 import { HTTPError } from '@/index.js'
@@ -61,9 +61,9 @@ class RequestHelpers {
    */
   async validateBareBody<const Definition extends ValidatorDefinition>(definition: Definition) {
     const body = await this.request.body.json()
-    const result = getValidator(definition)('body', body as AllowedInputValue)
+    const result = getValidator(definition)('body', body as PrimitiveType)
     // 因 validator 类型推断过于复杂，会报 “Type instantiation is excessively deep and possibly infinite” 问题，这里将其屏蔽
-    // @ts-expect-error 屏蔽类型推断问题
+    // @ts-ignore 屏蔽类型推断问题
     if (result.success) return result.data
     throw new HTTPError(400, result.message)
   }

@@ -1,5 +1,6 @@
 import type http from 'node:http'
-import { parseQuery, type Logger } from '@anjianshi/utils'
+import { type GeneralLogger } from '@stdex/utils'
+import { parseQuery } from '@stdex/utils/url.js'
 import { RequestBody, type BodyOptions } from './body/index.js'
 import { HTTPError, type NodeRequest } from './types.js'
 
@@ -40,7 +41,7 @@ export class Request {
 
   constructor(
     readonly nodeRequest: NodeRequest,
-    protected readonly logger: Logger,
+    protected readonly logger: GeneralLogger,
     bodyOptions: BodyOptions,
   ) {
     if (nodeRequest.method === undefined) throw new HTTPError(405)

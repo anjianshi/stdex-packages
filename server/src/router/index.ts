@@ -1,4 +1,5 @@
-import { type OptionalFields, joinPath } from '@anjianshi/utils'
+import { type OptionalFields } from '@stdex/utils'
+import { joinPath } from '@stdex/utils/url.js'
 import { getPreflightRequestMethod, handleCORS, type CORSRule } from '@/http/cors.js'
 import { HTTPError, type Request, type ResponseUtils } from '@/http/index.js'
 import { Swagger, type Method } from '@/swagger/index.js'

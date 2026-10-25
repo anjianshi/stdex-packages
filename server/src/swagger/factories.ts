@@ -1,7 +1,7 @@
 /**
  * 用更符合日常习惯的参数格式，快捷生成各类 OpenAPI 定义
  */
-import { truthy, type OptionalFields } from '@anjianshi/utils'
+import { truthy, type OptionalFields } from '@stdex/utils'
 import defaultsDeep from 'lodash/defaultsDeep.js'
 import pick from 'lodash/pick.js'
 import type {

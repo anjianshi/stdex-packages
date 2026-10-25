@@ -1,5 +1,5 @@
 import http from 'node:http'
-import { type Logger, LogLevel } from '@anjianshi/utils'
+import { type GeneralLogger } from '@stdex/utils'
 import { type BodyOptions } from './body/index.js'
 import { Request } from './request.js'
 import { ResponseUtils } from './response.js'
@@ -31,7 +31,7 @@ export type RequestHandler = (request: Request, response: ResponseUtils) => unkn
 export function startHTTPServer(
   options: BodyOptions & {
     handler?: RequestHandler
-    logger: Logger
+    logger: GeneralLogger
     port: number
     /** 处理 JSON 输出中的自定义类型，详见 JSON.stringify() 的 replacer 参数 */
     jsonReplacer?: (key: string, value: unknown) => unknown
@@ -55,8 +55,9 @@ export function startHTTPServer(
 
     const logUsage = Date.now() - logStart
     const logStatus = nodeResponse.statusCode
-    const logLevel = logStatus >= 400 ? LogLevel.Warning : LogLevel.Info
-    logger.log(logLevel, ['-->', logMethod, logUrl, logStatus, `${logUsage}ms`])
+    const logArgs = ['-->', logMethod, logUrl, logStatus, `${logUsage}ms`]
+    if (logStatus >= 400) logger.warn(...logArgs)
+    else logger.info(...logArgs)
   }
 
   const server = http.createServer(handleRequest)
