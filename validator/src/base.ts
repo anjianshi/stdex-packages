@@ -1,20 +1,28 @@
 import { success, failure, type Result } from '@stdex/utils'
 
 /**
- * 支持传入进行验证的值类型
- */
-export type AllowedInputValue = PrimitiveType | null | undefined
-
-/**
  * JavaScript 基础值类型
  */
 export type PrimitiveType =
+  | null
+  | undefined
   | string
   | boolean
   | number
   | PrimitiveType[]
   | [...PrimitiveType[]]
   | { [key: string]: PrimitiveType }
+
+/**
+ * 非空的 JavaScript 基础值类型
+ */
+export type NonEmptyPrimitiveType =
+  | string
+  | boolean
+  | number
+  | NonEmptyPrimitiveType[]
+  | [...NonEmptyPrimitiveType[]]
+  | { [key: string]: NonEmptyPrimitiveType }
 
 /**
  * validator 通用参数
@@ -82,8 +90,8 @@ export type Validated<Value, InputOptions extends CommonOptions> =
  * 最终生成的 validator 函数类型
  */
 export interface Validator<Value, InputOptions extends CommonOptions> {
-  (input: AllowedInputValue): Result<Validated<Value, InputOptions>>
-  (field: string, input: AllowedInputValue): Result<Validated<Value, InputOptions>>
+  (input: PrimitiveType): Result<Validated<Value, InputOptions>>
+  (field: string, input: PrimitiveType): Result<Validated<Value, InputOptions>>
 }
 
 // -----------------------------------
@@ -103,9 +111,9 @@ export function getValidatorGenerator<Value, Options extends CommonOptions>(
     inputOptions: InputOptions,
   ): Validator<Value, InputOptions> {
     type Return = Result<Validated<Value, InputOptions>>
-    function validator(input: AllowedInputValue): Return
-    function validator(field: string, input: AllowedInputValue): Return
-    function validator(field: string | AllowedInputValue, input?: AllowedInputValue) {
+    function validator(input: PrimitiveType): Return
+    function validator(field: string, input: PrimitiveType): Return
+    function validator(field: string | PrimitiveType, input?: PrimitiveType) {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const { null: allowNull = false, required = true, defaults, custom } = inputOptions
 
@@ -114,7 +122,7 @@ export function getValidatorGenerator<Value, Options extends CommonOptions>(
         field = 'value'
       }
 
-      let value: AllowedInputValue | Validated<Value, Options> = input
+      let value: PrimitiveType | Validated<Value, Options> = input
       if (typeof value === 'undefined') {
         if (typeof defaults !== 'undefined') {
           value = defaults as Validated<Value, Options>

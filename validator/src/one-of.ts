@@ -3,7 +3,7 @@ import {
   getValidatorGenerator,
   type CommonOptions,
   type Validator,
-  type AllowedInputValue,
+  type PrimitiveType,
 } from './base.js'
 
 /** 要求返回值通过其中一个验证器的检查 */
@@ -24,7 +24,7 @@ export function getOneOfValidator<const Options extends OneOfOptions>(
   return getValidatorGenerator<OneOfValue<Options>, Options>(function validate(field, value) {
     const errors: string[] = []
     for (const validator of options.validators) {
-      const result = validator(field, value as AllowedInputValue)
+      const result = validator(field, value as PrimitiveType)
       if (result.success) return result as Result<OneOfValue<Options>>
       else errors.push(result.message)
     }

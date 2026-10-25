@@ -5,7 +5,7 @@ import {
   type CommonOptions,
   type Validator,
   type Validated,
-  type AllowedInputValue,
+  type PrimitiveType,
 } from './base.js'
 
 /** 验证有明确键值对结构的对象 */
@@ -32,7 +32,7 @@ export function getStructValidator<const Options extends StructOptions>(options:
       for (const [key, itemValidator] of Object.entries(options.struct)) {
         const itemResult = itemValidator(
           `${field}["${key}"]`,
-          (value as Record<string, AllowedInputValue>)[key],
+          (value as Record<string, PrimitiveType>)[key],
         )
         if (itemResult.success) {
           if (itemResult.data !== undefined) formatted[key] = itemResult.data
@@ -75,7 +75,7 @@ export function getRecordValidator<Options extends RecordOptions>(options: Optio
       if (!isPlainObject(value)) return failure(`${field} should be a plain object`)
 
       const formatted: Record<string, unknown> = {}
-      for (const [key, itemValue] of Object.entries(value as Record<string, AllowedInputValue>)) {
+      for (const [key, itemValue] of Object.entries(value as Record<string, PrimitiveType>)) {
         // record 场景下，值为 undefined 的项目视为不存在，不保留在验证结果里，
         // 不然一些因为不想赋值而填充了 undefined 值的项目可能意外触发验证失败，或意外得到了默认值。
         // （因此 validator 的 required 选项和 defaults 选项也没有意义了）
