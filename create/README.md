@@ -29,7 +29,9 @@ npm init @stdex@latest {template} -- --name=xxx
 
 ### 指定依赖版本
 
-除非有明确的版本需要，否则 `package.json` 中的依赖版本都指定为 `latest`，项目初始化时会替换为实际版本号。
+- 对于 @stdex 相关依赖，`package.json` 中的依赖版本均设置为 `workspace:*`。
+- 对于其他依赖，除非有明确的版本需要，否则 `package.json` 中的依赖版本都指定为 `latest`。
+- 以上依赖版本在项目初始化时均会替换为实际版本号。
 
 ### 定义变量
 

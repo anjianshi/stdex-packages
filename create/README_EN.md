@@ -29,7 +29,9 @@ npm init @stdex@latest {template} -- --name=xxx
 
 ### Specifying Dependency Versions
 
-Unless a specific version is required, set dependency versions in `package.json` to `latest`. They will be replaced with the actual version numbers when the project is initialized.
+- Set dependency versions for `@stdex` packages in `package.json` to `workspace:*`.
+- For other dependencies, set their versions in `package.json` to `latest` unless a specific version is required.
+- These dependency versions will be replaced with the actual version numbers when the project is initialized.
 
 ### Defining Variables
 
@@ -61,7 +63,16 @@ export async function setup(context: { command, confirmPath, getDirectoryPath })
 
 This function runs after the automatic project initialization process finishes. The script file is then deleted.
 
-### Specifying .gitignore
+### Renaming Files
+
+Some files cannot conveniently use their original names in the template directory, so their names are prefixed with an underscore.
+Their proper names are restored automatically when the project is initialized.
+
+| Original filename    | Filename in template   | Reason                                                                    |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------- |
+| .gitignore           | \_gitignore            | npm automatically renames `.gitignore` to `.npmignore` during installation |
+| pnpm-workspace.yaml  | \_pnpm-workspace.yaml  | It affects how pnpm determines the list of packages in the workspace      |
+| .env                 | \_env                  | It may be mistakenly treated as a temporary file                          |
 
 Because installing an npm package automatically renames `.gitignore` to `.npmignore`, this file must be named `gitignore` (without the leading dot) in a template.
 It is automatically renamed to `.gitignore` when the project is initialized.

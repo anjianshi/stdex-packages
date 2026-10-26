@@ -1,11 +1,12 @@
 {
   "name": "@stdex/create",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "npm init 项目模板 - Project Templates For 'npm init'",
   "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/create/",
   "type": "module",
   "scripts": {
-    "dev": "rm -rf test && node ./src/index.js base --name=test"
+    "dev": "rm -rf test && node ./src/index.js base --name=test",
+    "lint": "eslint './src/**/*'"
   },
   "bin": {
     "create": "./src/index.js"
@@ -29,12 +30,10 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "dependencies": {
-    "chalk": "^5.3.0"
-  },
   "devDependencies": {
     "@stdex/presets-eslint-node": "workspace:*",
-    "@stdex/presets-prettier": "workspace:*"
+    "@stdex/presets-prettier": "workspace:*",
+    "eslint": "^10.6.0"
   },
   "prettier": "@stdex/presets-prettier/prettierrc"
 }

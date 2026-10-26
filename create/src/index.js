@@ -4,7 +4,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import readline from 'node:readline/promises'
 import { fileURLToPath } from 'node:url'
-import chalk from 'chalk'
+import { styleText } from 'node:util'
 
 // -------------------------
 // 工具函数
@@ -28,7 +28,7 @@ function confirmPath(path) {
 }
 
 function exit(message, code = 1) {
-  console.error(chalk.red(message))
+  console.error(styleText('red', message))
   process.exit(code)
 }
 
@@ -37,14 +37,14 @@ function exit(message, code = 1) {
  * 若 exitOnError 为 true，执行失败时会直接退出程序
  */
 async function command(command, exitOnError = true) {
-  console.log('\n> ' + chalk.green(command))
+  console.log('\n> ' + styleText('green', command))
   return new Promise(resolve => {
     const subprocess = child_process.spawn(command, {
       shell: true,
       cwd: projectPath,
     })
-    subprocess.stdout.on('data', data => process.stdout.write(chalk.gray(data)))
-    subprocess.stderr.on('data', data => process.stdout.write(chalk.red(data)))
+    subprocess.stdout.on('data', data => process.stdout.write(styleText('gray', data)))
+    subprocess.stderr.on('data', data => process.stdout.write(styleText('red', data)))
     subprocess.on('close', code => {
       if (code !== 0 && exitOnError) exit('命令执行失败')
       process.stdout.write('\n')
@@ -149,7 +149,7 @@ async function getVariableValues(variables) {
       if (!answer) {
         if (defaults !== undefined) answer = defaults
         else {
-          console.log(chalk.red('不能为空'))
+          console.log(styleText('red', '不能为空'))
           continue
         }
       }
@@ -214,7 +214,7 @@ if (confirmPath(packageJSONPath) === 'file') {
 
 function formatDependencies(dependencies) {
   return dependencies
-    .map(([name, ver]) => (ver !== 'latest' ? `${name}@${ver}` : name))
+    .map(([name, ver]) => (ver !== 'latest' && ver !== 'workspace:*' ? `${name}@${ver}` : name))
     .join(' ')
 }
 
