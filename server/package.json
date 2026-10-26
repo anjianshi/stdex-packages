@@ -29,7 +29,8 @@
   "author": "anjianshi <anjianshi@gmail.com>",
   "repository": "github:anjianshi/stdex-packages",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "main": "dist/index.js",
   "dependencies": {
