@@ -38,3 +38,16 @@ JavaScript / TypeScript 实用工具集，随各类项目开发不断完善。
 | [presets-prettier](./presets-prettier/)     | Prettier 配置                | @stdex/presets-prettier   |
 | [presets-typescript](./presets-typescript/) | TypeScript 配置及工具脚本    | @stdex/presets-typescript |
 | [create](./create/)                         | 项目模版，快速初始化各类项目 | @stdex/create             |
+
+## 开发流程
+
+- 拉取完整 Git 项目
+- pnpm install 完成开发环境初始化
+- 修改代码
+- 发布（手动）
+  - 修改有更新的项目及依赖它的项目的版本号
+  - 依次发布
+- 发布（自动）
+  - 修改有更新的项目的版本号
+  - 全局安装 pnpm-workspace-publisher 依赖
+  - 运行 ws-publish 发布。它会自动更新依赖项目的版本号并一起发布。

@@ -61,7 +61,16 @@ export async function setup(context: { command, confirmPath, getDirectoryPath })
 
 此函数会在项目自动初始化流程运行完执行，之后此脚本文件会被删除。
 
-### 指定 .gitignore
+### 文件重命名
+
+部分文件不方便以原文件名出现在模板目录里，因此改为以下划线开头。
+在初始化项目时，会自动修正为应有的名称。
+
+| 原文件名            | 模板中的文件名        | 原因                                                     |
+| ------------------- | --------------------- | -------------------------------------------------------- |
+| .gitignore          | \_gitignore           | 安装 npm 包时会自动把 `.gitignore` 重命名为 `.npmignore` |
+| pnpm-workspace.yaml | \_pnpm-workspace.yaml | 会影响 pnpm 对工作区内包列表的判断                       |
+| .env                | \_env                 | 会被误判为临时文件                                       |
 
 因为安装 npm 包时会自动把 `.gitignore` 重命名为 `.npmignore`，因此模板里需要把此文件命名为 `gitignore`（不带开头的点）。
 在初始化项目时会自动重命名为 `.gitignore`。
