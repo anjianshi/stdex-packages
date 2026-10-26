@@ -1,4 +1,4 @@
-import { Router } from 'starlight-server'
+import { Router } from '@stdex/server'
 import {
   initializeAppControllers,
   controllerClasses,
@@ -6,6 +6,7 @@ import {
 } from '@/controllers/index.js'
 import { getTransactionContextedPrismaClient, type AppPrismaClient } from '@/database.js'
 import { rootLogger } from '@/logger.js'
+
 export const logger = rootLogger.getChild('API')
 
 /**
@@ -14,7 +15,7 @@ export const logger = rootLogger.getChild('API')
  * -----------------------------
  */
 
-declare module 'starlight-server' {
+declare module '@stdex/server' {
   interface Context {
     db: AppPrismaClient
     controllers: Controllers

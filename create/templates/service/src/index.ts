@@ -1,4 +1,4 @@
-import { startHTTPServer } from 'starlight-server'
+import { startHTTPServer } from '@stdex/server'
 import { initRedis } from '@/cache.js'
 import config from '@/config.js'
 import { rootLogger } from '@/logger.js'
