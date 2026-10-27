@@ -1,6 +1,6 @@
 {
   "name": "@stdex/create",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "npm init 项目模板 - Project Templates For 'npm init'",
   "homepage": "https://github.com/anjianshi/stdex-packages/tree/master/create/",
   "type": "module",
@@ -17,7 +17,8 @@
     "!templates/**/node_modules",
     "!templates/**/.swc",
     "!templates/**/.DS_Store",
-    "!templates/**/dist"
+    "!templates/**/dist",
+    "!templates/service/src/prisma"
   ],
   "bugs": {
     "url": "https://github.com/anjianshi/stdex-packages/issues",

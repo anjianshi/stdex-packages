@@ -4,3 +4,4 @@ dist/
 .swc/
 .env
 logs/
+create/templates/service/src/prisma/
