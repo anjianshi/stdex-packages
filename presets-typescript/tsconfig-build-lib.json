@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig-build",
+  "compilerOptions": {
+    "declaration": true
+  }
+}

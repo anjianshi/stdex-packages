@@ -2,12 +2,13 @@
 
 简体中文 | [English](./README_EN.md)
 
-| 文件                                          | 场景                                                            |
-| --------------------------------------------- | --------------------------------------------------------------- |
-| @stdex/presets-typescript/tsconfig-base.json  | 仅用 TypeScript 包进行类型检查，用其他工具编译代码              |
-| @stdex/presets-typescript/tsconfig-build.json | 用 tsc 执行编译（支持编译类库和 Node.js 脚本，输出 ES6 Module） |
-| @stdex/presets-typescript/tsconfig-vite.json  | 用 Vite 打包                                                    |
-| tsc-with-alias                                | 组合运行 tsc 和 tsc-alias 以及 nodemon。                        |
+| 文件                                              | 场景                                                              |
+| ------------------------------------------------- | ----------------------------------------------------------------- |
+| @stdex/presets-typescript/tsconfig-base.json      | 仅用 TypeScript 包进行类型检查，用其他工具编译代码                |
+| @stdex/presets-typescript/tsconfig-build.json     | 用 tsc 执行编译。用于编译日常项目和 Node.js 脚本，输出 ES6 Module |
+| @stdex/presets-typescript/tsconfig-build-lib.json | 用 tsc 执行编译。用于编译类库，输出 ES6 Module 和类型定义         |
+| @stdex/presets-typescript/tsconfig-vite.json      | 用 Vite 打包                                                      |
+| tsc-with-alias                                    | 组合运行 tsc 和 tsc-alias 以及 nodemon。                          |
 
 ## 关于 TypeScript 7
 
