@@ -1,5 +1,5 @@
 {
-  "extends": ["./node_modules/@stdex/presets-typescript/tsconfig-build.json"],
+  "extends": ["./node_modules/@stdex/presets-typescript/tsconfig-build-lib"],
   "compilerOptions": {
     "types": ["node"],
     "removeComments": false,
