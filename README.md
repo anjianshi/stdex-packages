@@ -5,7 +5,7 @@ JavaScript / TypeScript 实用工具集，随各类项目开发不断完善。
 ## 开发思路
 
 - 有用、好用即可，不求高大上和完美。
-- 保证代码和概念清晰、易懂，避免奇技淫巧。
+- 保证代码和概念清晰易懂，避免奇技淫巧。
 - 预留扩展空间，不强制使用习惯。
 
 ## 项目内容
@@ -39,7 +39,9 @@ JavaScript / TypeScript 实用工具集，随各类项目开发不断完善。
 | [presets-typescript](./presets-typescript/) | TypeScript 配置及工具脚本    | @stdex/presets-typescript |
 | [create](./create/)                         | 项目模版，快速初始化各类项目 | @stdex/create             |
 
-## 开发流程
+## 开发规范
+
+### 开发流程
 
 - 拉取完整 Git 项目
 - pnpm install 完成开发环境初始化
@@ -51,3 +53,21 @@ JavaScript / TypeScript 实用工具集，随各类项目开发不断完善。
   - 修改有更新的项目的版本号
   - 全局安装 pnpm-workspace-publisher 依赖
   - 运行 ws-publish 发布。它会自动更新依赖项目的版本号并一起发布。
+
+### Git 提交格式
+
+`type(project/module): message`  
+例如：`fix(utils/url): 修正参数定义`
+
+- type：修改类型
+- project：被修改的项目。若涉及多个项目，可省略，在后文中罗列。
+- module：被修改的模块。若涉及项目中的多个模块，可省略，在后文中罗列。
+
+修改类型约定：
+
+- fix：修复问题
+- feat：功能调整
+- refactor：重构、优化
+- style：不影响逻辑的格式调整
+- docs：文档更新
+- chore：其他维护性修改。例如调整测试用例、更新版本号、依赖版本等。
