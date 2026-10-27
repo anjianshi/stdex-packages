@@ -2,12 +2,13 @@
 
 [简体中文](./README.md) | English
 
-| File                                          | Use Case                                                                     |
-| --------------------------------------------- | ---------------------------------------------------------------------------- |
-| @stdex/presets-typescript/tsconfig-base.json  | Type-check with TypeScript and compile with another tool                     |
-| @stdex/presets-typescript/tsconfig-build.json | Compile with tsc (for libraries and Node.js scripts, with ES6 module output) |
-| @stdex/presets-typescript/tsconfig-vite.json  | Bundle with Vite                                                             |
-| tsc-with-alias                                | Run tsc, tsc-alias, and nodemon together                                     |
+| File                                              | Use Case                                                                     |
+| ------------------------------------------------- | ---------------------------------------------------------------------------- |
+| @stdex/presets-typescript/tsconfig-base.json      | Type-check with TypeScript and compile with another tool                     |
+| @stdex/presets-typescript/tsconfig-build.json     | Compile everyday projects and Node.js scripts with tsc; output ES6 modules     |
+| @stdex/presets-typescript/tsconfig-build-lib.json | Compile libraries with tsc; output ES6 modules and type definitions            |
+| @stdex/presets-typescript/tsconfig-vite.json      | Bundle with Vite                                                             |
+| tsc-with-alias                                    | Run tsc, tsc-alias, and nodemon together                                     |
 
 ## About TypeScript 7
 
