@@ -43,8 +43,12 @@ async function command(command, exitOnError = true) {
       shell: true,
       cwd: projectPath,
     })
-    subprocess.stdout.on('data', data => process.stdout.write(styleText('gray', data)))
-    subprocess.stderr.on('data', data => process.stdout.write(styleText('red', data)))
+    subprocess.stdout.on('data', data => {
+      process.stdout.write(typeof data === 'string' ? styleText('gray', data) : data)
+    })
+    subprocess.stderr.on('data', data => {
+      process.stdout.write(typeof data === 'string' ? styleText('red', data) : data)
+    })
     subprocess.on('close', code => {
       if (code !== 0 && exitOnError) exit('命令执行失败')
       process.stdout.write('\n')
